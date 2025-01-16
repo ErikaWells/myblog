@@ -18,28 +18,28 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Blog Title 
-email: author_email@email.com 
-description: "Change the description so that it describes your blog" 
-baseurl: "/stat386-blog-theme" # the name of the repository 
-url: "https://esnt.github.io" #  change this to "https://<your-github-username>.github.io"
+title: Data-Driven Decisions
+email: erika@wellsmail.us
+description: "As a girl in the modern world I have a lot of decisions to make. What to wear, Where to travel, oh and of course the important things like what I should do with my life! When I need to make a decision, I don't turn to friends or family, (who does that these days?) I turn to data. Let's talk about it" 
+baseurl: "/myblog" 
+url: "https://ErikaWells.github.io" 
 image: /assets/images/headerimg.jpg
-author: Your name
-copyright: ABCD # Your initials or name or what you want the copyright to be.  Leave empty for no copyright
+author: Erika Wells
+copyright: ERW
 footer_description: 
 
 
 # Social media users names.  Leave fields blank that you don't want displayed
-twitter_username: 386student
-github_username:  386student
-linkedin_username: 386student
+twitter_username: 
+github_username:  ErikaWells
+linkedin_username: ErikaWells
 dribbble_username: 
-facebook_username: 386student
+facebook_username: 
 flickr_username:
-instagram_username: 
+instagram_username: _erikawells
 pinterest_username:
 youtube_username: 
-googleplus_username: 386student
+googleplus_username: 
 
 plugins:
   - jekyll-feed
