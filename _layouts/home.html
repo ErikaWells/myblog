@@ -6,24 +6,57 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-<!-- The CSS grid that makes up the entirety of the hero image/banner image area -->
-<section class="top-banner-section">
-  <!-- The CSS grid area that displays the image (layer 1) -->
-  <div class="banner-image-div">
-    <img class="banner-image" src="{{- site.image | relative_url -}}" alt="Banner Image" />
-  </div>
-  <!-- The CSS grid area that displays the semi-transparent gradient overlay (layer 2) -->
-  <div class="banner-overlay-div"></div>
-  <!-- The CSS grid area that displays the content (layer 3) -->
-  <div class="banner-text-div">
+  <!-- CSS Styles -->
+  <style>
+    .banner-image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .top-banner-section {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .banner-text-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .banner-h1-text {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .banner-body-text {
+        font-size: 1rem;
+        color: #666;
+    }
+  </style>
+
+  <!-- Hero Banner Section -->
+  <section class="top-banner-section">
+    <!-- Image Layer -->
+    <div class="banner-image-div">
+      <img class="banner-image" src="{{- site.image | relative_url -}}" alt="Banner Image" />
+    </div>
+    <!-- Semi-transparent Overlay Layer -->
+    <div class="banner-overlay-div"></div>
+  </section>
+
+  <!-- Text Description Below the Banner -->
+  <div class="banner-text-container">
     <span class="banner-text">
       <p class="banner-h1-text">{{ site.title }}</p>
-      <p class="banner-body-text">{{site.author}}</p>
-      <p class="banner-body-text">{{site.description}}</p>
+      <p class="banner-body-text">{{ site.author }}</p>
+      <p class="banner-body-text">{{ site.description }}</p>
     </span>
   </div>
-</section>
-  
+
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
@@ -43,7 +76,7 @@ layout: default
         {% assign words = post.content | number_of_words %}
         {%- unless content.size == 0 -%}
          <span class="post-meta">   •  {{ words | divided_by:180 }} min read</span>
-      {%- endunless -%}
+        {%- endunless -%}
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
@@ -55,8 +88,6 @@ layout: default
       </li>
       {%- endfor -%}
     </ul>
-
-    <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
   {%- endif -%}
-
 </div>
+
