@@ -3,7 +3,7 @@
 
   <div class="wrapper">
 
-  <!-- <h2 class="footer-heading">{{ site.title | escape }}</h2> -->
+    <!-- <h2 class="footer-heading">{{ site.title | escape }}</h2> -->
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
@@ -14,13 +14,13 @@
             {%- else -%}
               {{ site.title | escape }}
             {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-            {%- if site.copyright -%} 
-            <li>&copy; {{ site.copyright}} {{ 'now' | date: "%Y" }} </li>
-            {%- endif -%}
+          </li>
+          {%- if site.email -%}
+          <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          {%- endif -%}
+          {%- if site.copyright -%} 
+          <li>&copy; {{ site.copyright }} {{ 'now' | date: "%Y" }}</li>
+          {%- endif -%}
         </ul>
       </div>
 
@@ -32,7 +32,7 @@
         <a href="{{ site.github.repository_url }}" class="button"><strong>View Source Repo On GitHub</strong></a>
 
         <p>
-          {{site.footer_description}}
+          {{ site.footer_description }}
         </p>
         
       </div>
@@ -41,3 +41,57 @@
   </div>
 
 </footer>
+
+<style>
+  /* Button styles */
+  .button {
+    background-color: #f4a2a1; /* Pink Color */
+    color: #fff829; /* Yellow Text */
+    padding: 10px 20px; /* Space inside the button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it look like a button */
+    font-weight: bold; /* Bold text */
+  }
+
+  /* Hover effect for the button */
+  .button:hover {
+    background-color: ##db9a99; /* Darker pink color for the hover */
+    color: #fff829; /* Yellow Text */
+  }
+
+  /* Footer layout adjustments (optional, for consistent design) */
+  .site-footer {
+    background-color: #f4a2a1; /* Pink background */
+    padding: 20px;
+    font-size: 14px;
+    color: #212529;
+  }
+
+  .footer-col-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .footer-col {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-col a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+  }
+
+  .footer-col a:hover {
+    text-decoration: underline;
+  }
+</style>
+
