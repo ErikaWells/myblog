@@ -7,31 +7,34 @@ layout: default
   {%- endif -%}
 
   <!-- CSS Styles -->
- <style>
+<style>
   /* Full-width image banner */
   .banner-image {
-      width: 100%;
+      width: 100%; /* Ensures the image spans the entire width */
       height: auto;
       display: block;
+      object-fit: cover; /* This ensures the image covers the area without stretching */
   }
 
   /* Top banner section */
   .top-banner-section {
       position: relative;
-      width: 100%;
+      width: 100%; /* Ensures the section is full width */
       margin: 0;
       padding: 0;
-      overflow: hidden;
+      overflow: hidden; /* Hides any content that overflows the boundaries */
   }
 
-  /* Reduce space between image and text */
+  /* Remove any margin or padding that could restrict the image width */
   .banner-image-div {
-      margin-bottom: 1px; /* Adjust this value as needed */
+      margin: 0;
+      padding: 0;
+      width: 100%; /* Makes the container take full width */
   }
 
   .banner-text-container {
       text-align: center;
-      margin-top: 1px; /* Adjust this value as needed */
+      margin-top: 5px; /* Adjust this value as needed */
   }
 
   /* Bold title and description */
