@@ -54,18 +54,43 @@ Bottom line: The right chart makes your data tell a story. The wrong chart makes
 
 ## So Let’s Get Started
 Are you ready to make your first visualization in Tableau? Let’s start easy and free and head straight for Tableau Public. 
-1. Sign Up For a Profile to Save Your Work 
-2. Create first visualization
+#### 1. Sign Up For a Profile to Save Your Work here: https://public.tableau.com/app/discover
+   This is simple and free and will allow you to save and share your work.
+   
+#### 2. Create your first visualization.
+   In order to create your visualization, navigate to the top left, click "Create+", then "Web Authoring". You've officially done it!
    ![Tableau Image](/assets/images/Create_Viz.jpg)
-3. Upload a dataset
+   
+#### 3. Upload a dataset.
+   Follow along with me by using the same dataset: https://www.kaggle.com/datasets/xavierberge/road-accident-dataset
+   Immediately after creating your viz, a pop up will appear allowing you to connect your data. Once here navigate to the location of your data on your computer. If the popup doesn't appear, click on the "Data" tab in the top left, then "New Data Source" to access the pop up.   
    ![Tableau Image](/assets/images/Connect_Data.jpg)
-   Follow along with me: https://www.kaggle.com/datasets/xavierberge/road-accident-dataset
-4. Drag and Drop Variables
+   
+#### 4. Drag and Drop Variables
+   In order to start our viz, be sure to click on the "Sheet 1" tab on the footer. (This is a great time to name your sheet too)
+   You'll notice a long list of variables on the left of your screen; this is where the fun beigns!
+   I suggest exploring these variables by dragging and dropping them into the "Columns" and "Rows" found just underneath our toolbar. As you start playing around you'll begin to notice trends. 
    ![Variables Image](/assets/images/Variables_Tab.jpg)
+
+  Here is an example of my histogram where I compared the sum of the number of vehicles involved in crashes to the month of the year. Beware of November! 
    ![Histogram Image](/assets/images/Histogram.jpg)
-5. Add filters
+
+  Before moving on try answering a few of these questions as you create new vizzes: 
+  What day of the week has the total highest number of vehicles involved in a crash? What about the highest average number of vehicles involved in a crash? What road type has the total highest number of casualities? Urban or Rural? What were the conditions? 
+
+  If you struggled creating these charts here is a youtube tutorial to help: https://www.youtube.com/watch?v=jEgVto5QME8
+  
+  
+#### 5. Add filters
+   Try dragging and dropping variables to create filters. You can filter shape, color, or size, depending on the type of viz you're creating. 
+   In the following histogram I filtered by "Weather Conditions". In order to do this I clicked and dragged the variable until it was hovering over the "Color" icon. This automatically creates a filter and uses color to demonstrate the weather conditions within each crash. 
+   Test out other filters and see what you can discover about the data. 
+   
     ![Filtered Image](/assets/images/Filters.jpg)
-6. Try different variations
+    
+#### 10. Try different variations
+   The options are endless with Tableau. Check out my public dashboard to see some of the other vizzes I've created. 
+   https://public.tableau.com/app/profile/erika.wells/vizzes
 
 ## Interpretation of Data
 ### Key Questions to Ask
