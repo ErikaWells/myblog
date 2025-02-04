@@ -1,31 +1,71 @@
 ---
 layout: default
 ---
-
 <div class="home">
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-<!-- The CSS grid that makes up the entirety of the hero image/banner image area -->
-<section class="top-banner-section">
-  <!-- The CSS grid area that displays the image (layer 1) -->
-  <div class="banner-image-div">
-    <img class="banner-image" src="{{- site.image | relative_url -}}" alt="Banner Image" />
-  </div>
-  <!-- The CSS grid area that displays the semi-transparent gradient overlay (layer 2) -->
-  <div class="banner-overlay-div"></div>
-  <!-- The CSS grid area that displays the content (layer 3) -->
-  <div class="banner-text-div">
+  <!-- CSS Styles -->
+<style>
+  /* Full-width image banner */
+  .banner-image {
+      width: 100%; /* Ensures the image spans the entire width */
+      height: auto;
+      display: block;
+      object-fit: cover; /* This ensures the image covers the area without stretching */
+  }
+
+  /* Top banner section */
+  .top-banner-section {
+      position: relative;
+      width: 100%; /* Ensures the section is full width */
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Hides any content that overflows the boundaries */
+  }
+
+  /* Remove any margin or padding that could restrict the image width */
+  .banner-image-div {
+      margin: 0;
+      padding: 0;
+      width: 100%; /* Makes the container take full width */
+  }
+
+  .banner-text-container {
+      text-align: center;
+      margin-top: 5px; /* Adjust this value as needed */
+  }
+
+  /* Bold title and description */
+  .banner-h1-text {
+      font-size: 2.5rem;
+      font-weight: 700; /* Makes the title bold */
+  }
+
+  .banner-body-text {
+      font-size: 1.25rem;
+      font-weight: 400; /* Makes the description bold */
+      color: #333; /* Darker text for better visibility */
+  }
+</style>
+
+  <!-- Hero Banner Section -->
+  <section class="top-banner-section">
+    <!-- Image Layer -->
+    <div class="banner-image-div">
+      <img class="banner-image" src="{{- site.image | relative_url -}}" alt="Banner Image" />
+    </div>
+  </section>
+
+  <!-- Text Description Below the Banner -->
+  <div class="banner-text-container">
     <span class="banner-text">
       <p class="banner-h1-text">{{ site.title }}</p>
-      <p class="banner-body-text">{{site.author}}</p>
-      <p class="banner-body-text">{{site.description}}</p>
+      <p class="banner-body-text">{{ site.description }}</p>
     </span>
   </div>
-</section>
-  
-  
+
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
@@ -45,7 +85,7 @@ layout: default
         {% assign words = post.content | number_of_words %}
         {%- unless content.size == 0 -%}
          <span class="post-meta">   •  {{ words | divided_by:180 }} min read</span>
-      {%- endunless -%}
+        {%- endunless -%}
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
@@ -57,8 +97,7 @@ layout: default
       </li>
       {%- endfor -%}
     </ul>
-
-    <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
   {%- endif -%}
-
 </div>
+
+
