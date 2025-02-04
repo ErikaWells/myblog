@@ -3,7 +3,7 @@ layout: post
 title:  "Data Visualization: Solving The Global Epidemic"
 author: Erika Wells
 description: "With access to endless data presentation is crucial. Learn the importance of data visualizations and how to get started with Tableau."
-image: "/assets/images/WhyData_Image.jpg"  # You can also use a URL for the image
+image: "/assets/images/Data_Viz_Post.jpg"  # You can also use a URL for the image
 ---
 
 # Data Visualization
