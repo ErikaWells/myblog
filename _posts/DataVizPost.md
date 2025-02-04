@@ -55,12 +55,17 @@ Bottom line: The right chart makes your data tell a story. The wrong chart makes
 ## So Let’s Get Started
 Are you ready to make your first visualization in Tableau? Let’s start easy and free and head straight for Tableau Public. 
 1. Sign Up For a Profile to Save Your Work 
-2. Create first visualization 
-3. Upload a dataset 
-4. Follow along with me: https://www.kaggle.com/datasets/xavierberge/road-accident-dataset
-5. Drag and Drop Variables 
-6. Add filters 
-7. Try different variations
+2. Create first visualization
+   ![Tableau Image](assets/images/Create_Viz.jpg)
+3. Upload a dataset
+   ![Tableau Image](assets/images/Connect_Data.jpg)
+   Follow along with me: https://www.kaggle.com/datasets/xavierberge/road-accident-dataset
+4. Drag and Drop Variables
+   ![Variables Image](assets/images/Variables_Tab.jpg)
+   ![Histogram Image](assets/images/Histogram.jpg)
+5. Add filters
+    ![Filtered Image](assets/images/Filters.jpg)
+6. Try different variations
 
 ## Interpretation of Data
 ### Key Questions to Ask
