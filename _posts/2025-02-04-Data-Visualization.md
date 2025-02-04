@@ -14,6 +14,9 @@ Most people look at a chart and make immediate assumptions about the data. Isn�
 If it isn’t obvious yet, I believe data visualization is extremely important. It shapes the world we live in and the decisions we make (plus it’s super fun). So today I want to dive into this topic and give you an overview of my favorite tool for this art: Tableau. 
 Tableau is a data visualization and business intelligence (BI) tool that enables users to analyze and present data in beautiful ways. Users can easily upload and connect datasets, manipulate data, create dashboards and reports, and even integrate with other software. 
 
+
+
+
 ## Top Features of Tableau
 #### Data Connectivity
    Excel, SQL databases, cloud storage, even big data platforms. If it has data, Tableau can probably read it.
@@ -28,6 +31,9 @@ Tableau is a data visualization and business intelligence (BI) tool that enables
 #### Collaboration & Sharing 
    Publish dashboards for your team, your clients, or the entire internet.
 
+
+
+
 ## Tableau Products
 #### Tableau Desktop 
    Where the magic happens. Build your dashboards here.
@@ -38,7 +44,10 @@ Tableau is a data visualization and business intelligence (BI) tool that enables
 #### Tableau Public 
    The free version for showing off your work to the world. (I love to use this on LinkedIn)
 #### Tableau Prep 
-    Because messy data is the enemy, and this helps clean it up.
+   Because messy data is the enemy, and this helps clean it up.
+
+
+
 
 ## What Chart Should I Use?
 ### Step One: Know Your Data
@@ -69,6 +78,9 @@ Here’s a quick guide to making sure your data gets the chart it deserves:
    Example: Visualizing revenue breakdowns by product category and subcategory.
 
 Bottom line: The right chart makes your data tell a story. The wrong chart makes people squint at their screen. Thus, choose wisely. You don’t want to make people work so hard they misinterpret the data.
+
+
+
 
 ## So Let’s Get Started
 Are you ready to make your first visualization in Tableau? Let’s start easy and free and head straight for Tableau Public. 
@@ -115,6 +127,9 @@ Are you ready to make your first visualization in Tableau? Let’s start easy an
    The options are endless with Tableau. Check out my public dashboard to see some of the other vizzes I've created. 
    https://public.tableau.com/app/profile/erika.wells/vizzes
 
+
+
+
 ## Interpretation of Data
 ### Key Questions to Ask
 As you create your visualizations focus on what questions you want it to answer. Can a reader easily gain these insights from what you’ve created? 
@@ -140,6 +155,9 @@ Do you need to explain something that’s not immediately obvious? Tooltips and 
 
 #### 5. Avoid Misleading Visuals
 ALWAYS prioritize accurate representations of your data. No one needs a 3D pie chart that makes the numbers look bigger than they really are. Stick to what’s true, and steer clear of anything that could lead to misinterpretation.
+
+
+
 
 At the end of the day, good data visualization should be like an enjoyable conversation, clear, engaging, and straightforward. 
 I hope my blog has taught you a little more about data visualizations and how to create something that tells a story. Now don’t just read - go create something! I’m excited to see what you create. 
