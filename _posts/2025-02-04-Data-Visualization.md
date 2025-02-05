@@ -91,7 +91,7 @@ Are you ready to make your first visualization in Tableau? Let’s start easy an
 #### 2. Create your first visualization.
    In order to create your visualization, navigate to the top left, click "Create+", then "Web Authoring". You've officially done it!
    
-   ![Tableau Image](https://yourusername.github.io/yourrepo/assets/images/Create_Viz.jpg
+   ![Tableau Image](https://yourusername.github.io/yourrepo/assets/images/Create_Viz.jpg)
 
 #### 3. Upload a dataset.
    Follow along with me by using the same dataset: https://www.kaggle.com/datasets/xavierberge/road-accident-dataset
