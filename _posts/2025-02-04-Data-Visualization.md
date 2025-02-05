@@ -97,7 +97,7 @@ Are you ready to make your first visualization in Tableau? Let’s start easy an
    Follow along with me by using the same dataset: https://www.kaggle.com/datasets/xavierberge/road-accident-dataset
    Immediately after creating your viz, a pop up will appear allowing you to connect your data. Once here navigate to the location of your data on your computer. If the popup doesn't appear, click on the "Data" tab in the top left, then "New Data Source" to access the pop up.   
   
-   [![Tableau Image](/assets/images/Connect_Data.jpg)](https://github.com/ErikaWells/myblog/blob/main/assets/images/Connect_Data.jpg)
+   <img src="https://github.com/ErikaWells/myblog/blob/main/assets/images/Connect_Data.jpg">
    
 #### 4. Drag and Drop Variables
    In order to start our viz, be sure to click on the "Sheet 1" tab on the footer. (This is a great time to name your sheet too)
