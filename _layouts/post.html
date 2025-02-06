@@ -31,12 +31,11 @@ layout: default
     
   </header>
   
- 
-
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
 
+  <!-- Comment Section -->
   <script src="https://utteranc.es/client.js"
           repo="your-user-name/stat386-blog-theme"
           issue-term="pathname"
@@ -45,7 +44,6 @@ layout: default
           crossorigin="anonymous"
           async>
   </script>
-  
 
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
