@@ -15,7 +15,7 @@ If it isn’t obvious yet, I believe data visualization is extremely important. 
 Tableau is a data visualization and business intelligence (BI) tool that enables users to analyze and present data in beautiful ways. Users can easily upload and connect datasets, manipulate data, create dashboards and reports, and even integrate with other software. 
 
 
-![Tableau]({{ site.url }}/{{ site.baseurl }}/assets/images/Tableau.jpg)
+![Data Visualization]({{ site.url }}/{{ site.baseurl }}/assets/images/Data_Viz.jpg)
 
 
 ## Top Features of Tableau
@@ -160,10 +160,12 @@ Do you need to explain something that’s not immediately obvious? Tooltips and 
 ALWAYS prioritize accurate representations of your data. No one needs a 3D pie chart that makes the numbers look bigger than they really are. Stick to what’s true, and steer clear of anything that could lead to misinterpretation.
 
 
+## Conclusion
 
 
-At the end of the day, good data visualization should be like an enjoyable conversation, clear, engaging, and straightforward. 
-I hope my blog has taught you a little more about data visualizations and how to create something that tells a story. Now don’t just read - go create something! I’m excited to see what you create. 
+As we've explored, data visualization is far from just a tool; it's an essential part of telling the stories hidden within our data. Whether you’re a novice statistician (like me) or a seasoned expert, mastering the art of visualization is key to making data not only accessible but engaging and insightful for everyone. Tableau provides us with an incredible platform to bring these visualizations to life, turning complex datasets into simple, digestible insights that can guide decision-making. (Be sure to explore other visualization tools and packages to expand your skills.)
+
+But, let’s not forget the greater responsibility that comes with creating these visuals. As data analysts, statisticians, and data scientists, we are the gatekeepers of information. The way we choose to display and communicate data has a direct impact on how it's interpreted—and ultimately, how decisions are made. So, let’s continue to hone our skills, make thoughtful choices, and use the power of visual storytelling to drive meaningful change. The world needs accurate, clear, and engaging data representations, and it’s up to us to deliver them with creativity and precision. I hope my blog has taught you a little more about data visualizations and how to create something that tells a story. Now don’t just read - go create something! I’m excited to see what you create. 
 
 
 
