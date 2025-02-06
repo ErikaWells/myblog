@@ -85,7 +85,7 @@ Bottom line: The right chart makes your data tell a story. The wrong chart makes
 ## So Let’s Get Started
 Are you ready to make your first visualization in Tableau? Let’s start easy and free and head straight for Tableau Public. 
 
-#### 1. Sign Up For a Profile to Save Your Work here: https://public.tableau.com/app/discover
+#### 1. Sign Up For a Profile to Save Your Work here: [Link Text](https://public.tableau.com/app/discover)
    This is simple and free and will allow you to save and share your work.
    
 #### 2. Create your first visualization.
@@ -114,7 +114,7 @@ Are you ready to make your first visualization in Tableau? Let’s start easy an
   Before moving on try answering a few of these questions as you create new vizzes: 
   What day of the week has the total highest number of vehicles involved in a crash? What about the highest average number of vehicles involved in a crash? What road type has the total highest number of casualities? Urban or Rural? What were the conditions? 
 
-  If you struggled creating these charts here is a youtube tutorial to help: https://www.youtube.com/watch?v=jEgVto5QME8
+  If you struggled creating these charts here is a youtube tutorial to help: [Link Text](https://www.youtube.com/watch?v=jEgVto5QME8)
   
   
 #### 5. Add filters
@@ -127,7 +127,7 @@ Are you ready to make your first visualization in Tableau? Let’s start easy an
   
 #### 10. Try different variations
    The options are endless with Tableau. Check out my public dashboard to see some of the other vizzes I've created. 
-   https://public.tableau.com/app/profile/erika.wells/vizzes
+   [Link Text](https://public.tableau.com/app/profile/erika.wells/vizzes)
 
 
 
