@@ -15,6 +15,7 @@ If it isn’t obvious yet, I believe data visualization is extremely important. 
 Tableau is a data visualization and business intelligence (BI) tool that enables users to analyze and present data in beautiful ways. Users can easily upload and connect datasets, manipulate data, create dashboards and reports, and even integrate with other software. 
 
 
+![Tableau]({{ site.url }}/{{ site.baseurl }}/assets/images/Tableau.jpg)
 
 
 ## Top Features of Tableau
