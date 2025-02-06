@@ -15,20 +15,29 @@ If it isn’t obvious yet, I believe data visualization is extremely important. 
 Tableau is a data visualization and business intelligence (BI) tool that enables users to analyze and present data in beautiful ways. Users can easily upload and connect datasets, manipulate data, create dashboards and reports, and even integrate with other software. 
 
 
+
 ![Data Visualization]({{ site.url }}/{{ site.baseurl }}/assets/images/Data_Viz.jpg)
 
 
+
+
 ## Top Features of Tableau
+
 #### Data Connectivity
    Excel, SQL databases, cloud storage, even big data platforms. If it has data, Tableau can probably read it.
+   
 #### Drag-and-Drop Interface 
    No coding required. Just click, drag, and boom—instant visualizations.
+   
 #### Interactive Dashboards 
    Filter, drill down, and interact with your data in real time. No more static charts.
+   
 #### Advanced Analytics 
    Calculated fields, trend lines, forecasting, and integration with R and Python are all supported with Tableau.
+   
 #### Real-Time Data Processing 
    Work with live data or save extracts for faster analysis.
+   
 #### Collaboration & Sharing 
    Publish dashboards for your team, your clients, or the entire internet.
 
@@ -36,14 +45,19 @@ Tableau is a data visualization and business intelligence (BI) tool that enables
 
 
 ## Tableau Products
+
 #### Tableau Desktop 
    Where the magic happens. Build your dashboards here.
+   
 #### Tableau Server 
    Share your work with your team and collaborate.
+   
 #### Tableau Online 
    Like Server, but in the cloud. No IT team required.
+   
 #### Tableau Public 
    The free version for showing off your work to the world. (I love to use this on LinkedIn)
+   
 #### Tableau Prep 
    Because messy data is the enemy, and this helps clean it up.
 
@@ -59,21 +73,27 @@ Does it change over time? (monthly sales, daily website traffic)
 
 ### Step Two: Choose Wisely
 Here’s a quick guide to making sure your data gets the chart it deserves:
+
 #### Bar Chart 
    The MVP of comparisons. Use it when you want to see how different categories stack up.
    Example: Comparing sales across regions or product categories.
+   
 #### Line Chart 
    Your go-to for trends over time. If your data has a time element, this is probably your best bet.
    Example: Tracking monthly sales over the past year.
+   
 #### Pie Chart 
    Shows proportions, but use this one very sparingly, they always end up confusing.
    Example: Displaying market share among competitors.
+   
 #### Scatter Plot 
    When you need to show relationships between two numerical variables. Great for spotting correlations!
    Example: Analyzing if higher ad spend actually leads to more sales.
+   
 #### Heat Map 
    Ideal for showing patterns across two categories, like time of day vs. customer activity.
    Example: Identifying when your website gets the most traffic.
+   
 #### Tree Map 
    Hierarchical data? This one’s for you. Size and color do the heavy lifting here.
    Example: Visualizing revenue breakdowns by product category and subcategory.
@@ -86,7 +106,7 @@ Bottom line: The right chart makes your data tell a story. The wrong chart makes
 ## So Let’s Get Started
 Are you ready to make your first visualization in Tableau? Let’s start easy and free and head straight for Tableau Public. 
 
-#### 1. Sign Up For a Profile to Save Your Work here: [Link Text](https://public.tableau.com/app/discover)
+#### 1. Sign Up For a Profile to Save Your Work here: [Tableau Home](https://public.tableau.com/app/discover)
    This is simple and free and will allow you to save and share your work.
    
 #### 2. Create your first visualization.
@@ -115,7 +135,7 @@ Are you ready to make your first visualization in Tableau? Let’s start easy an
   Before moving on try answering a few of these questions as you create new vizzes: 
   What day of the week has the total highest number of vehicles involved in a crash? What about the highest average number of vehicles involved in a crash? What road type has the total highest number of casualities? Urban or Rural? What were the conditions? 
 
-  If you struggled creating these charts here is a youtube tutorial to help: [Link Text](https://www.youtube.com/watch?v=jEgVto5QME8)
+  If you struggled creating these charts here is a youtube tutorial to help: [Data Visualization Tutorial](https://www.youtube.com/watch?v=jEgVto5QME8)
   
   
 #### 5. Add filters
@@ -128,7 +148,7 @@ Are you ready to make your first visualization in Tableau? Let’s start easy an
   
 #### 10. Try different variations
    The options are endless with Tableau. Check out my public dashboard to see some of the other vizzes I've created. 
-   [Link Text](https://public.tableau.com/app/profile/erika.wells/vizzes)
+   [My Dashboard](https://public.tableau.com/app/profile/erika.wells/vizzes)
 
 
 
@@ -161,7 +181,6 @@ ALWAYS prioritize accurate representations of your data. No one needs a 3D pie c
 
 
 ## Conclusion
-
 
 As we've explored, data visualization is far from just a tool; it's an essential part of telling the stories hidden within our data. Whether you’re a novice statistician (like me) or a seasoned expert, mastering the art of visualization is key to making data not only accessible but engaging and insightful for everyone. Tableau provides us with an incredible platform to bring these visualizations to life, turning complex datasets into simple, digestible insights that can guide decision-making. (Be sure to explore other visualization tools and packages to expand your skills.)
 
