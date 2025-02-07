@@ -103,7 +103,7 @@ Bottom line: The right chart makes your data tell a story. The wrong chart makes
 
 
 
-## So Let’s Get Started
+## Let’s Get Started
 Are you ready to make your first visualization in Tableau? Let’s start easy and free and head straight for Tableau Public. 
 
 #### 1. Sign Up For a Profile to Save Your Work here: [Tableau Home](https://public.tableau.com/app/discover)
