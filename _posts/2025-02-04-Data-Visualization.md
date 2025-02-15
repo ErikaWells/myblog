@@ -23,42 +23,31 @@ Tableau is a data visualization and business intelligence (BI) tool that enables
 
 ## Top Features of Tableau
 
-- **Data Connectivity**  
-  Excel, SQL databases, cloud storage, even big data platforms. If it has data, Tableau can probably read it.  
+- **Data Connectivity:** Excel, SQL databases, cloud storage, even big data platforms. If it has data, Tableau can probably read it.  
 
-- **Drag-and-Drop Interface**  
-  No coding required. Just click, drag, and boom—instant visualizations.  
+- **Drag-and-Drop Interface:** No coding required. Just click, drag, and boom—instant visualizations.  
 
-- **Interactive Dashboards**  
-  Filter, drill down, and interact with your data in real time. No more static charts.  
+- **Interactive Dashboards:** Filter, drill down, and interact with your data in real time. No more static charts.  
 
-- **Advanced Analytics**  
-  Calculated fields, trend lines, forecasting, and integration with R and Python are all supported with Tableau.  
+- **Advanced Analytics:** Calculated fields, trend lines, forecasting, and integration with R and Python are all supported with Tableau.  
 
-- **Real-Time Data Processing**  
-  Work with live data or save extracts for faster analysis.  
+- **Real-Time Data Processing:** Work with live data or save extracts for faster analysis.  
 
-- **Collaboration & Sharing**  
-  Publish dashboards for your team, your clients, or the entire internet.
+- **Collaboration & Sharing:** Publish dashboards for your team, your clients, or the entire internet.
 
   
 
 ## Tableau Products  
 
-- **Tableau Desktop**  
-  Where the magic happens. Build your dashboards here.  
+- **Tableau Desktop:** Where the magic happens. Build your dashboards here.  
 
-- **Tableau Server**  
-  Share your work with your team and collaborate.  
+- **Tableau Server:** Share your work with your team and collaborate.  
 
-- **Tableau Online**  
-  Like Server, but in the cloud. No IT team required.  
+- **Tableau Online:** Like Server, but in the cloud. No IT team required.  
 
-- **Tableau Public**  
-  The free version for showing off your work to the world. (I love to use this on LinkedIn)  
+- **Tableau Public:** The free version for showing off your work to the world. (I love to use this on LinkedIn)  
 
-- **Tableau Prep**  
-  Because messy data is the enemy, and this helps clean it up.  
+- **Tableau Prep:** Because messy data is the enemy, and this helps clean it up.  
 
 
 
@@ -77,28 +66,28 @@ Before you even think about picking a chart, ask yourself:
 ### Step Two: Choose Wisely
 Here’s a quick guide to making sure your data gets the chart it deserves:
 
-- **Bar Chart**  
-  The MVP of comparisons. Use it when you want to see how different categories stack up.  
+**Bar Chart**
+- The MVP of comparisons. Use it when you want to see how different categories stack up.  
   *Example:* Comparing sales across regions or product categories.  
 
-- **Line Chart**  
-  Your go-to for trends over time. If your data has a time element, this is probably your best bet.  
+**Line Chart**
+- Your go-to for trends over time. If your data has a time element, this is probably your best bet.  
   *Example:* Tracking monthly sales over the past year.  
 
-- **Pie Chart**  
-  Shows proportions, but use this one very sparingly—they always end up confusing.  
+**Pie Chart**  
+- Shows proportions, but use this one very sparingly—they always end up confusing.  
   *Example:* Displaying market share among competitors.  
 
-- **Scatter Plot**  
-  When you need to show relationships between two numerical variables. Great for spotting correlations!  
+**Scatter Plot**  
+ - When you need to show relationships between two numerical variables. Great for spotting correlations!  
   *Example:* Analyzing if higher ad spend actually leads to more sales.  
 
-- **Heat Map**  
-  Ideal for showing patterns across two categories, like time of day vs. customer activity.  
+**Heat Map**  
+ - Ideal for showing patterns across two categories, like time of day vs. customer activity.  
   *Example:* Identifying when your website gets the most traffic.  
 
-- **Tree Map**  
-  Hierarchical data? This one’s for you. Size and color do the heavy lifting here.  
+**Tree Map**  
+ - Hierarchical data? This one’s for you. Size and color do the heavy lifting here.  
   *Example:* Visualizing revenue breakdowns by product category and subcategory.  
 
 
