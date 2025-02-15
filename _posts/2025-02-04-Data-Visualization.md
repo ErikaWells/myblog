@@ -102,7 +102,9 @@ Here’s a quick guide to making sure your data gets the chart it deserves:
   *Example:* Visualizing revenue breakdowns by product category and subcategory.  
 
 
-Bottom line: The right chart makes your data tell a story. The wrong chart makes people squint at their screen. Thus, choose wisely. You don’t want to make people work so hard they misinterpret the data.
+Bottom line: The right chart makes your data tell a story. The wrong chart makes people squint at their screen. Thus, choose wisely. You don’t want to make people work so hard they misinterpret the data. 
+
+If you want to learn more about charts and when to use them check out <a href="https://www.datylon.com/blog/types-of-charts-graphs-examples-data-visualization" target="_blank" rel="noopener noreferrer">this article</a> from datylon. 
 
 
 
