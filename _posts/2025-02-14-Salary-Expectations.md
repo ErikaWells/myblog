@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "What Really Influences Your Salary Five Years After Graduation?"
+author: Erika Wells
+description: "A look into the factors that influence salary."
+image: "/assets/images/WhyData_Image.jpg"  # You can also use a URL for the image
+---
+
+
 # **Introduction**
 
 Does your college GPA determine how much you'll make in five years? What about your major? And do men and women with the same degree earn the same salary? We analyzed salary data from the American Community Survey to uncover patterns in graduate earnings five years after college. The findings are surprising and the influence on your career is even more profound.
@@ -10,6 +19,7 @@ Before you start obsessing over your grades, know that your major plays a much b
 
 Check out the chart below. We can see that as the GPA increase there is some increase in salary, however, our line is not very steep, showing us that the impact isn't extremely strong.
 
+[GPA by Salary Chart](\assets\images\SalarybyGPA.png)
 
 **Key Takeaway:** A high GPA can help, but it won’t compensate for a low-paying major. If maximizing salary is your goal, what you study is more important than your grades.
 
