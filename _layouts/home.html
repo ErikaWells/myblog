@@ -2,39 +2,49 @@ layout: default
 ---
 <div class="home">
   {%- if page.title -%}
-    <h1 class="page-heading" style="font-family: 'Pacifico', cursive;">{{ page.title }}</h1>
+    <h1 class="page-heading" style="font-family: 'Arial', sans-serif; font-weight: bold; text-transform: uppercase; color: #2E4C6E;">{{ page.title }}</h1>
   {%- endif -%}
 
   <!-- CSS Styles -->
   <style>
-    /* Coastal Color Palette */
+    /* Lighter Cream Background */
     body {
-        background-color: #f8f1e1; /* Cream background */
-        font-family: 'Roboto', sans-serif; /* Base font */
+        background-color: #fef9f4; /* Lighter cream color */
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
     }
 
-    /* Banner text container */
+    /* Header Style */
+    .top-banner-section {
+        background-color: #2E4C6E; /* Header background color */
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    /* Banner Text Container */
     .banner-text-container {
         text-align: center;
-        margin-top: 5px;
+        margin-top: 10px;
         padding: 20px;
     }
 
-    /* Updated header text */
+    /* Banner Title and Description */
     .banner-h1-text {
         font-size: 3rem;
-        font-weight: 700;
-        color: #2E4C6E; /* Fun and cool tone */
-        font-family: 'Pacifico', cursive; /* Fun, relaxed font */
+        font-weight: bold;
+        color: #2E4C6E;
+        text-transform: uppercase;
     }
 
     .banner-body-text {
         font-size: 1.25rem;
         font-weight: 400;
-        color: #7D7D7D; /* Muted gray for readability */
+        color: #7D7D7D;
     }
 
-    /* Blog post list layout */
+    /* Blog Post List Layout */
     .post-list {
         list-style: none;
         padding: 0;
@@ -45,22 +55,22 @@ layout: default
         align-items: center;
         margin-bottom: 20px;
         padding: 10px;
-        background-color: #ffffff;
-        border-radius: 8px;
+        background-color: #fce8e4; /* Light pink background */
+        border-radius: 5px; /* Less curved */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease-in-out;
     }
 
     .post-list li:hover {
-        transform: translateY(-5px); /* Hover effect for blog posts */
+        transform: translateY(-5px);
     }
 
     .blog-roll-image {
-        width: 120px; /* Smaller image size */
-        height: 120px;
+        width: 100px; /* Smaller image size */
+        height: 100px;
         object-fit: cover;
-        margin-right: 20px; /* Space between image and text */
-        border-radius: 8px;
+        margin-right: 20px;
+        border-radius: 5px; /* Less curved */
     }
 
     .post-meta {
@@ -76,10 +86,10 @@ layout: default
     }
 
     .post-link:hover {
-        color: #F57C00; /* Fun pop of orange on hover */
+        color: #F57C00; /* Subtle orange hover effect */
     }
 
-    /* Footer adjustments */
+    /* Footer Style */
     footer {
         background-color: #2E4C6E;
         color: #ffffff;
@@ -89,14 +99,13 @@ layout: default
     }
   </style>
 
-  <!-- Removed background header image -->
-  <!-- Text Description Below the Banner -->
-  <div class="banner-text-container">
-    <span class="banner-text">
+  <!-- Header Section (restored) -->
+  <section class="top-banner-section">
+    <div class="banner-text-container">
       <p class="banner-h1-text">{{ site.title }}</p>
       <p class="banner-body-text">{{ site.description }}</p>
-    </span>
-  </div>
+    </div>
+  </section>
 
   {{ content }}
 
@@ -115,18 +124,8 @@ layout: default
           <span class="post-meta">{{ post.date | date: site.minima.date_format | default: "%b %-d, %Y" }}</span>
           <h3>
             <a class="post-link" href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
-            </a>
-          </h3>
-          {%- if post.description -%}
-          <font size="-1"><em>{{ post.description }}</em></font>
-          {%- endif -%}
-        </div>
-      </li>
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
-</div>
+              {{ post.title 
+
 
 
 
