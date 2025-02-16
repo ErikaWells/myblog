@@ -1,51 +1,15 @@
 <style>
-  /* Blog Post Section Styling */
-  .post-list li {
-    display: flex; 
-    align-items: center; /* Ensures content is vertically aligned */
-    margin-bottom: 20px; /* Space between posts */
-    transition: transform 0.3s ease; /* Smooth hover transition */
+  /* General Site Background */
+  body {
+    background-color: #f9f7f1; /* Slightly more cream than white */
   }
 
-  .post-list li:hover {
-    transform: translateY(-5px); /* Slight hover effect */
-  }
-
-  .blog-roll-image {
-    width: 100px; /* Adjust width as needed */
-    height: 100px; /* Adjust height as needed */
-    object-fit: cover; /* Ensures the image doesn't stretch */
-    margin-right: 15px; /* Space between image and text */
-  }
-
-  .post-meta {
-    font-size: 14px;
-    color: #999; /* Light gray color for date */
-    margin-bottom: 10px;
-  }
-
-  /* Header styling */
-  .page-heading {
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    margin-top: 20px;
-    text-align: center;
-    color: #333; /* Adjust color as needed */
-  }
-
-  /* Date formatting */
-  .post-meta {
-    font-size: 14px;
-    color: #999; /* Light gray color for date */
-  }
-
-  /* Navigation Bar - Links to other pages */
+  /* Header Bar */
   .navbar {
     display: flex;
     justify-content: center;
-    background-color: #f1f1f1;
-    padding: 10px;
+    background-color: #f7b7b7; /* Light pink */
+    padding: 15px 0;
   }
 
   .navbar a {
@@ -59,13 +23,87 @@
   .navbar a:hover {
     color: #1abc9c; /* Fun pop of color */
   }
-  
-  /* Remove unnecessary borders from blog post boxes */
+
+  /* Page Heading */
+  .page-heading {
+    font-size: 3rem;
+    letter-spacing: 0.1rem; /* More space between letters */
+    font-weight: bold;
+    text-align: center;
+    color: #003366; /* Navy blue */
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif; /* Simple, bold font */
+  }
+
+  /* Intro Section */
+  .intro-section {
+    text-align: center;
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 30px auto;
+    color: #333;
+  }
+
+  /* Blog Post Section */
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+  }
+
   .post-list {
+    width: 80%; /* Center the posts and give space on sides */
     padding: 0;
     list-style: none;
   }
 
+  /* Blog Post Layout */
+  .post-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+
+  .post-list li:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+  }
+
+  .blog-roll-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+
+  .post-meta {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+  }
+
+  /* Blog Post Titles */
+  h3 a.post-link {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #003366; /* Navy blue for titles */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 0.05rem;
+  }
+
+  h3 a.post-link:hover {
+    color: #1abc9c; /* Hover color */
+  }
+
+  /* Blog Post Description */
+  .post-description {
+    font-size: 0.9rem;
+    color: #666;
+  }
 </style>
 
 <!-- Header -->
@@ -75,8 +113,13 @@
     <a href="/about">About</a>
     <a href="/contact">Contact</a>
   </div>
-  <h1 class="page-heading">Data-Driven Decisions</h1>
+  <h1 class="page-heading">Data-Driven Insights</h1>
 </header>
+
+<!-- Site Description (Intro) -->
+<section class="intro-section">
+  <p>{{ site.description }}</p>
+</section>
 
 <!-- Blog Post Section -->
 <section>
@@ -90,7 +133,7 @@
           {%- else -%}
             <img src="https://source.unsplash.com/random" alt="" class="blog-roll-image">
           {%- endif -%}
-          
+
           <div>
             <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
             <h3>
@@ -99,7 +142,7 @@
               </a>
             </h3>
             {%- if post.description -%}
-              <font size="-1"><em>{{ post.description }}</em></font>
+              <div class="post-description"><font size="-1"><em>{{ post.description }}</em></font></div>
             {%- endif -%}
           </div>
         </li>
@@ -107,7 +150,6 @@
     </ul>
   {%- endif -%}
 </section>
-
 
 
 
