@@ -19,7 +19,7 @@ Before you start obsessing over your grades, know that your major plays a much b
 
 Check out the chart below. We can see that as the GPA increase there is some increase in salary, however, our line is not very steep, showing us that the impact isn't extremely strong.
 
-[GPA by Salary Chart](\assets\images\SalarybyGPA.png)
+![GPA by Salary Chart]({{ site.url }}/{{ site.baseurl }}/assets/images/SalarybyGPA.png)
 
 **Key Takeaway:** A high GPA can help, but it won’t compensate for a low-paying major. If maximizing salary is your goal, what you study is more important than your grades.
 
@@ -47,7 +47,7 @@ Arts: \$16,126 below the average salary
 
 A chart is included below showing the Majors ranked from highest-paying to lowest paying.
 
-
+![GPA by Major Chart]({{ site.url }}/{{ site.baseurl }}/assets/images/SalarybyMajor.png)
 
 # A View of the Gender Pay Gap
 
@@ -57,6 +57,8 @@ Interestingly, we also found differences in major selection. More men choose Eng
 
 Let's take a look at this. The following chart shows the number of individuals studying a major. We can visually recognize the different distribution of men and women.
 
+![Female Majors]({{ site.url }}/{{ site.baseurl }}/assets/images/FemaleMajors.png)
+![Male Majors]({{ site.url }}/{{ site.baseurl }}/assets/images/MaleMajors.png)
 
 **Key Takeaway:** Women continue to face wage disparities for every major studied. Addressing these gaps may require industry-level changes, better negotiation strategies, and more women entering high-paying fields.
 
