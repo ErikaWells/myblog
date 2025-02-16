@@ -1,156 +1,135 @@
-<style>
-  /* General Site Background */
-  body {
-    background-color: #f9f7f1; /* Slightly more cream than white */
-  }
+/* General Site Background */
+body {
+  background-color: #f9f7f1; /* Slightly more cream than white */
+}
 
-  /* Header Bar */
-  .navbar {
-    display: flex;
-    justify-content: center;
-    background-color: #f9d1d1; /* Light pink */
-    padding: 15px 0;
-  }
+/* Header Bar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #f9d1d1; /* Light pink */
+  padding: 15px 0;
+}
 
-  .navbar a {
-    margin: 0 15px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    color: #333;
-    text-decoration: none;
-  }
+.navbar a {
+  margin: 0 15px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #333;
+  text-decoration: none;
+}
 
-  .navbar a:hover {
-    color: #1abc9c; /* Fun pop of color */
-  }
+.navbar a:hover {
+  color: #1abc9c; /* Fun pop of color */
+}
 
-  /* Page Heading */
-  .page-heading {
-    font-size: 5rem;
-    letter-spacing: 0.8rem; /* More space between letters */
-    font-weight: bold;
-    text-align: center;
-    color: #003366; /* Navy blue */
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-family: 'Arial', sans-serif; /* Simple, bold font */
-    text-transform: uppercase;
-  }
+/* Page Heading */
+.page-heading {
+  font-size: 5rem;
+  letter-spacing: 0.8rem; /* More space between letters */
+  font-weight: bold;
+  text-align: center;
+  color: #003366; /* Navy blue */
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif; /* Simple, bold font */
+  text-transform: uppercase;
+}
 
-  /* Intro Section */
-  .intro-section {
-    text-align: center;
-    font-size: 1.2rem;
-    max-width: 900px;
-    margin: 30px auto;
-    color: #333;
-  }
+/* Intro Section */
+.intro-section {
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: 900px;
+  margin: 30px auto;
+  color: #333;
+}
 
-  /* Blog Post Section */
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 40px 0;
-  }
+/* Blog Post Section */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+}
 
-  .post-list {
-    width: 80%; /* Center the posts and give space on sides */
-    padding: 0;
-    list-style: none;
-  }
+.post-list {
+  width: 80%; /* Center the posts and give space on sides */
+  padding: 0;
+  list-style: none;
+}
 
-  /* Blog Post Layout */
-  .post-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-  }
+/* Blog Post Layout */
+.post-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
 
-  .post-list li:hover {
-    transform: translateY(-5px); /* Slight hover effect */
-  }
+.post-list li:hover {
+  transform: translateY(-5px); /* Slight hover effect */
+}
 
-  .blog-roll-image {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-right: 15px;
-  }
+.blog-roll-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 15px;
+}
 
-  .post-meta {
-    font-size: 14px;
-    color: #999;
-    margin-bottom: 10px;
-  }
+.post-meta {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+}
 
-  /* Blog Post Titles */
-  h3 a.post-link {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    color: #003366; /* Navy blue for titles */
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    text-decoration: none;
-    letter-spacing: 0.05rem;
-  }
+/* Blog Post Titles */
+h3 a.post-link {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: #003366; /* Navy blue for titles */
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 0.05rem;
+}
 
-  h3 a.post-link:hover {
-    color: #1abc9c; /* Hover color */
-  }
+h3 a.post-link:hover {
+  color: #1abc9c; /* Hover color */
+}
 
-  /* Blog Post Description */
-  .post-description {
-    font-size: 0.9rem;
-    color: #666;
-  }
-</style>
+/* Blog Post Description */
+.post-description {
+  font-size: 0.9rem;
+  color: #666;
+}
 
-<!-- Header -->
-<header>
-  <div class="navbar">
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/contact">Contact</a>
-  </div>
-  <h1 class="page-heading">Data-Driven Insights</h1>
-</header>
+/* Footer Styling */
+.footer {
+  background-color: #f7b7b7; /* Light pink color */
+  color: #003366; /* Navy blue text color */
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
 
-<!-- Site Description (Intro) -->
-<section class="intro-section">
-  <p>{{ site.description }}</p>
-</section>
+.footer p {
+  margin: 0;
+}
 
-<!-- Blog Post Section -->
-<section>
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">BLOG POSTS</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-        <li>
-          {%- if post.image -%}
-            <img src="{{- post.image | relative_url -}}" alt="" class="blog-roll-image">
-          {%- else -%}
-            <img src="https://source.unsplash.com/random" alt="" class="blog-roll-image">
-          {%- endif -%}
+.footer-links a {
+  text-decoration: none;
+  margin: 0 15px;
+  color: #003366;
+  font-weight: bold;
+}
 
-          <div>
-            <span class="post-meta">{{ post.date | date: "%m/%d/%Y" }}</span>
-            <h3>
-              <a class="post-link" href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
-              </a>
-            </h3>
-            {%- if post.description -%}
-              <div class="post-description"><font size="-1"><em>{{ post.description }}</em></font></div>
-            {%- endif -%}
-          </div>
-        </li>
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
-</section>
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 
 
 
