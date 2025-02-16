@@ -8,7 +8,7 @@
   .navbar {
     display: flex;
     justify-content: center;
-    background-color: #f7b7b7; /* Light pink */
+    background-color: #f9d1d1; /* Light pink */
     padding: 15px 0;
   }
 
@@ -26,14 +26,15 @@
 
   /* Page Heading */
   .page-heading {
-    font-size: 3rem;
-    letter-spacing: 0.1rem; /* More space between letters */
+    font-size: 5rem;
+    letter-spacing: 0.8rem; /* More space between letters */
     font-weight: bold;
     text-align: center;
     color: #003366; /* Navy blue */
     margin-top: 40px;
     margin-bottom: 20px;
     font-family: 'Arial', sans-serif; /* Simple, bold font */
+    text-transform: uppercase;
   }
 
   /* Intro Section */
@@ -124,7 +125,7 @@
 <!-- Blog Post Section -->
 <section>
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">Blog Posts</h2>
+    <h2 class="post-list-heading">BLOG POSTS</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
         <li>
@@ -135,7 +136,7 @@
           {%- endif -%}
 
           <div>
-            <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
+            <span class="post-meta">{{ post.date | date: "%m/%d/%Y" }}</span>
             <h3>
               <a class="post-link" href="{{ post.url | relative_url }}">
                 {{ post.title | escape }}
