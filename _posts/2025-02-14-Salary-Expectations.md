@@ -3,7 +3,7 @@ layout: post
 title:  "What Really Influences Your Salary Five Years After Graduation?"
 author: Erika Wells
 description: "A look into the factors that influence salary."
-image: "/assets/images/WhyData_Image.jpg"  # You can also use a URL for the image
+image: "/assets/images/Salary.jpeg"  # You can also use a URL for the image
 ---
 
 
