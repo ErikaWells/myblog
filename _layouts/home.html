@@ -2,102 +2,233 @@
 layout: default
 ---
 <div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
 
-  <!-- CSS Styles -->
-<style>
-  /* Full-width image banner */
-  .banner-image {
-      width: 100%; /* Ensures the image spans the entire width */
-      height: auto;
-      display: block;
-      object-fit: cover; /* This ensures the image covers the area without stretching */
-  }
-
-  /* Top banner section */
-  .top-banner-section {
-      position: relative;
-      width: 100%; /* Ensures the section is full width */
-      margin: 0;
-      padding: 0;
-      overflow: hidden; /* Hides any content that overflows the boundaries */
-  }
-
-  /* Remove any margin or padding that could restrict the image width */
-  .banner-image-div {
-      margin: 0;
-      padding: 0;
-      width: 100%; /* Makes the container take full width */
-  }
-
-  .banner-text-container {
-      text-align: center;
-      margin-top: 5px; /* Adjust this value as needed */
-  }
-
-  /* Bold title and description */
-  .banner-h1-text {
-      font-size: 2.5rem;
-      font-weight: 700; /* Makes the title bold */
-  }
-
-  .banner-body-text {
-      font-size: 1.25rem;
-      font-weight: 400; /* Makes the description bold */
-      color: #333; /* Darker text for better visibility */
-  }
-</style>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="{{ site.url | relative_url }}">{{ site.title }}</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Hero Banner Section -->
   <section class="top-banner-section">
-    <!-- Image Layer -->
-    <div class="banner-image-div">
+    <div class="banner-overlay">
       <img class="banner-image" src="{{- site.image | relative_url -}}" alt="Banner Image" />
+      <div class="banner-text">
+        <h1 class="banner-h1-text">{{ site.title }}</h1>
+        <p class="banner-body-text">{{ site.description }}</p>
+      </div>
     </div>
   </section>
 
-  <!-- Text Description Below the Banner -->
-  <div class="banner-text-container">
-    <span class="banner-text">
-      <p class="banner-h1-text">{{ site.title }}</p>
-      <p class="banner-body-text">{{ site.description }}</p>
-    </span>
-  </div>
-
+  <!-- Blog Posts -->
   {{ content }}
-
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <h2 class="post-list-heading">{{ page.list_title | default: "Recent Posts" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>
-        {%- if post.image -%}
-          <img src="{{- post.image | relative_url -}}" alt="" class="blog-roll-image">
-        {%- else -%}
-          {%- assign postImage = "https://source.unsplash.com/random" -%}
-          <img src="{{- postImage -}}" alt="" class="blog-roll-image">
-        {%- endif -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        {% assign words = post.content | number_of_words %}
-        {%- unless content.size == 0 -%}
-         <span class="post-meta">   •  {{ words | divided_by:180 }} min read</span>
-        {%- endunless -%}
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          {%- if post.image -%}
+            <img src="{{- post.image | relative_url -}}" alt="" class="blog-roll-image">
+          {%- else -%}
+            <img src="https://source.unsplash.com/random" alt="" class="blog-roll-image">
+          {%- endif -%}
+          <h3>{{ post.title | escape }}</h3>
+        </a>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} • {{ post.content | number_of_words | divided_by:180 }} min read</span>
         {%- if post.description -%}
-        <font size="-1"> <em> {{post.description}} </font></em>
+        <p class="post-description">{{ post.description }}</p>
         {%- endif -%}
       </li>
       {%- endfor -%}
     </ul>
   {%- endif -%}
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="https://github.com/ErikaWells" target="_blank">GitHub</a>
+      <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
 </div>
+
+<!-- Styles -->
+<style>
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 15px 30px;
+}
+
+.navbar .logo a {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Hero Banner */
+.top-banner-section {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.banner-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+.banner-h1-text {
+  font-size: 3rem;
+  font-weight: bold;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.banner-body-text {
+  font-size: 1.5rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Blog Post Styling */
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.post-list li {
+  background: white;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.post-list li:hover {
+  transform: scale(1.02);
+}
+
+.post-list .post-link {
+  text-decoration: none;
+  color: black;
+}
+
+.blog-roll-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.post-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+.footer-links a {
+  color: #ffcc00;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+
 
 
