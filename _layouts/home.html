@@ -1,141 +1,113 @@
-layout: default
----
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading" style="font-family: 'Arial', sans-serif; font-weight: bold; text-transform: uppercase; color: #2E4C6E;">{{ page.title }}</h1>
-  {%- endif -%}
+<style>
+  /* Blog Post Section Styling */
+  .post-list li {
+    display: flex; 
+    align-items: center; /* Ensures content is vertically aligned */
+    margin-bottom: 20px; /* Space between posts */
+    transition: transform 0.3s ease; /* Smooth hover transition */
+  }
 
-  <!-- CSS Styles -->
-  <style>
-    /* Lighter Cream Background */
-    body {
-        background-color: #fef9f4; /* Lighter cream color */
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        padding: 0;
-    }
+  .post-list li:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+  }
 
-    /* Header Style */
-    .top-banner-section {
-        background-color: #2E4C6E; /* Header background color */
-        color: white;
-        padding: 20px 0;
-        text-align: center;
-    }
+  .blog-roll-image {
+    width: 100px; /* Adjust width as needed */
+    height: 100px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures the image doesn't stretch */
+    margin-right: 15px; /* Space between image and text */
+  }
 
-    /* Banner Text Container */
-    .banner-text-container {
-        text-align: center;
-        margin-top: 10px;
-        padding: 20px;
-    }
+  .post-meta {
+    font-size: 14px;
+    color: #999; /* Light gray color for date */
+    margin-bottom: 10px;
+  }
 
-    /* Banner Title and Description */
-    .banner-h1-text {
-        font-size: 3rem;
-        font-weight: bold;
-        color: #2E4C6E;
-        text-transform: uppercase;
-    }
+  /* Header styling */
+  .page-heading {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 20px;
+    text-align: center;
+    color: #333; /* Adjust color as needed */
+  }
 
-    .banner-body-text {
-        font-size: 1.25rem;
-        font-weight: 400;
-        color: #7D7D7D;
-    }
+  /* Date formatting */
+  .post-meta {
+    font-size: 14px;
+    color: #999; /* Light gray color for date */
+  }
 
-    /* Blog Post List Layout */
-    .post-list {
-        list-style: none;
-        padding: 0;
-    }
+  /* Navigation Bar - Links to other pages */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
 
-    .post-list li {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-        padding: 10px;
-        background-color: #fce8e4; /* Light pink background */
-        border-radius: 5px; /* Less curved */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease-in-out;
-    }
+  .navbar a {
+    margin: 0 15px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #333;
+    text-decoration: none;
+  }
 
-    .post-list li:hover {
-        transform: translateY(-5px);
-    }
+  .navbar a:hover {
+    color: #1abc9c; /* Fun pop of color */
+  }
+  
+  /* Remove unnecessary borders from blog post boxes */
+  .post-list {
+    padding: 0;
+    list-style: none;
+  }
 
-    .blog-roll-image {
-        width: 100px; /* Smaller image size */
-        height: 100px;
-        object-fit: cover;
-        margin-right: 20px;
-        border-radius: 5px; /* Less curved */
-    }
+</style>
 
-    .post-meta {
-        font-size: 0.9rem;
-        color: #7D7D7D;
-    }
+<!-- Header -->
+<header>
+  <div class="navbar">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <h1 class="page-heading">Data-Driven Decisions</h1>
+</header>
 
-    .post-link {
-        font-size: 1.5rem;
-        color: #2E4C6E;
-        text-decoration: none;
-        font-weight: 600;
-    }
-
-    .post-link:hover {
-        color: #F57C00; /* Subtle orange hover effect */
-    }
-
-    /* Footer Style */
-    footer {
-        background-color: #2E4C6E;
-        color: #ffffff;
-        padding: 20px 0;
-        text-align: center;
-        margin-top: 30px;
-    }
-  </style>
-
-  <!-- Header Section (restored) -->
-  <section class="top-banner-section">
-    <div class="banner-text-container">
-      <p class="banner-h1-text">{{ site.title }}</p>
-      <p class="banner-body-text">{{ site.description }}</p>
-    </div>
-  </section>
-
-  {{ content }}
-
+<!-- Blog Post Section -->
+<section>
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <h2 class="post-list-heading">Blog Posts</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
-      <li>
-        {%- if post.image -%}
-          <img src="{{- post.image | relative_url -}}" alt="" class="blog-roll-image">
-        {%- else -%}
-          {%- assign postImage = "https://source.unsplash.com/random" -%}
-          <img src="{{- postImage -}}" alt="" class="blog-roll-image">
-        {%- endif -%}
-        <div>
-          <span class="post-meta">{{ post.date | date: site.minima.date_format | default: "%b %-d, %Y" }}</span>
-          <h3>
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
-            </a>
-          </h3>
-          {%- if post.description -%}
-          <font size="-1"><em>{{ post.description }}</em></font>
+        <li>
+          {%- if post.image -%}
+            <img src="{{- post.image | relative_url -}}" alt="" class="blog-roll-image">
+          {%- else -%}
+            <img src="https://source.unsplash.com/random" alt="" class="blog-roll-image">
           {%- endif -%}
-        </div>
-      </li>
+          
+          <div>
+            <span class="post-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+            {%- if post.description -%}
+              <font size="-1"><em>{{ post.description }}</em></font>
+            {%- endif -%}
+          </div>
+        </li>
       {%- endfor -%}
     </ul>
   {%- endif -%}
-</div>
+</section>
+
 
 
 
