@@ -49,7 +49,7 @@ While I will cover detailed Exploratory Data Analysis (EDA) separately, some ini
 - An average sneaker price of $156.58
 - The majority of sneakers between $110.25 and $189.75
 
-
+![Sneaker Prices]({{ site.url }}/{{ site.baseurl }}/assets/images/sneaker_prices.png)
 
 ### Keep Learning
 For those looking to replicate or push this project further, here are a few helpful resources:
