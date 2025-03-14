@@ -13,7 +13,7 @@ Sneakers are more than just footwear, they’re a cultural phenomenon! Whether i
 
 ![Sneakers by Joshua Renfroe]({{ site.url }}/{{ site.baseurl }}/assets/images/sneakerhead.jpg)
 
-<a href="https://www.instagram.com/joshuarenfroe_/?hl=en" target="_blank" rel="noopener noreferrer">Image by Joshua Refroe</a>
+<a href="https://www.instagram.com/joshuarenfroe_/?hl=en" target="_blank" rel="noopener noreferrer">Image by Joshua Renfroe</a>
 
 
 ## Chasing Trends: What Makes a Sneaker a Hit?
@@ -60,7 +60,7 @@ While I will cover detailed Exploratory Data Analysis (EDA) separately, some ini
 - An average sneaker price of $156.58
 - The majority of sneakers between $110.25 and $189.75
 
-![Sneaker Prices]({{ site.url }}/{{ site.baseurl }}/assets/images/sneaker_prices.jpg)
+![Sneaker Prices]({{ site.url }}/{{ site.baseurl }}/assets/images/sneaker_prices_updated.png)
 
 ## Keep Learning
 For those looking to replicate or push this project further, here are a few helpful resources:
