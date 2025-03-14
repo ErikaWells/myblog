@@ -7,19 +7,23 @@ image: "/assets/images/Shoe_Header.png"
 ---
 
 
-### Introduction
+# More Than Just Shoes
 Sneakers are more than just footwear, they’re a cultural phenomenon! Whether it’s the latest Air Jordan drop or a nostalgic re-release, sneaker prices and demand fluctuate based on various factors like release date, hype, and exclusivity. In this project, I used web-scraping to collect data from GOAT, a popular sneaker marketplace, to analyze trends in sneaker rankings, prices, and release dates.
 
 
-### Motivating Question
-The goal of this project was to explore patterns in sneaker popularity and pricing. Specifically, I wanted to investigate:
-- How do sneaker rankings correlate with price and release year?
-- Are newer releases consistently ranked higher than older ones?
-- Which brands or categories dominate the top rankings? (coming soon)
-- Which colorways are most popular currently? (coming soon)
+![Sneakers by Joshua Renfroe]({{ site.url }}/{{ site.baseurl }}/assets/images/sneakerhead.jpg)
+<a href="https://www.instagram.com/joshuarenfroe_/?hl=en" target="_blank" rel="noopener noreferrer">Image by Joshua Refroe</a>
 
 
-### Ethical Considerations & Web Scraping Best Practices
+## Chasing Trends: What Makes a Sneaker a Hit?
+Every sneaker tells a story, but what makes some more valuable than others? This project explores:
+- The relationship between sneaker rankings, prices, and release years
+- Whether new releases outperform older classics
+- Which brands and styles dominate resale rankings (coming soon)
+- The most popular colorways right now (coming soon)
+
+
+## Ethical Considerations & Web Scraping Best Practices
 Before collecting data, I ensured that my scraping practices were ethical and aligned with best practices:
 1. **Checking GOAT’s Terms of Service**: I reviewed GOAT’s website policies to confirm that automated scraping was permissible. Since GOAT does not provide an open API, I limited my requests to avoid server overload.
 2. **Respecting Rate Limits**: I included a delay between requests to prevent overwhelming the site.
@@ -27,7 +31,7 @@ Before collecting data, I ensured that my scraping practices were ethical and al
 4. **Data Usage**: My goal was to analyze publicly available sneaker listings for educational purposes only, without redistributing or monetizing the data.
 
 
-### How to Get the Data
+## How to Get the Data
 For anyone interested in conducting a similar project, here is a breakdown of the web-scraping steps:
 1. **Identify the Target Website**: Choose a reliable source like GOAT that provides structured data. I wanted to pick a site that included information of trends, specifically in fashion. This site worked perfectly because the sneakers were already ranked by most popular to least popular.  
 2. **Inspect the Website Structure**: Use browser developer tools (F12 in Chrome) to inspect HTML elements containing product details. You'll come back to this step over and over again as you workshop your code. 
@@ -42,14 +46,14 @@ For anyone interested in conducting a similar project, here is a breakdown of th
 
 **If you want more than just a summary check out my code on Github** <a href="https://github.com/ErikaWells/ShoeAnalysis" target="_blank" rel="noopener noreferrer">here!</a>
 
-### Summary of the Dataset
+## Summary of the Dataset
 My final dataset includes:
 - **182 sneakers**
 - **Features:** Rank, shoe name, price, release date, product link, main color (if available), and category (if available)
 - **Missing Data:** Some entries lacked information on color and category, which I'm currently working on adding by following each individual product link, stay tuned for new data soon!
 
 
-### Interesting Initial Findings
+## Interesting Initial Findings
 While I will cover detailed Exploratory Data Analysis (EDA) separately, some initial observations include:
 - A wide range of prices from $50 to almost $500!
 - An average sneaker price of $156.58
@@ -57,7 +61,7 @@ While I will cover detailed Exploratory Data Analysis (EDA) separately, some ini
 
 ![Sneaker Prices]({{ site.url }}/{{ site.baseurl }}/assets/images/sneaker_prices.png)
 
-### Keep Learning
+## Keep Learning
 For those looking to replicate or push this project further, here are a few helpful resources:
 - **Python Libraries**: <a href="https://docs.python-requests.org/en/latest/" target="_blank" rel="noopener noreferrer">`requests`</a>, <a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank" rel="noopener noreferrer">`BeautifulSoup`</a>, <a href="https://pypi.org/project/selenium/" target="_blank" rel="noopener noreferrer">`Selenium`</a>
 - **Web Scraping Guidelines**: <a href="https://docs.scrapy.org/en/latest/" target="_blank" rel="noopener noreferrer">Scrapy Documentation</a>
