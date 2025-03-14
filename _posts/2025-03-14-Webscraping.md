@@ -34,31 +34,32 @@ For anyone interested in conducting a similar project, here is a breakdown of th
 6. **Save Data for Future Use**: Export as a CSV for further exploration.
 
 
-**If you want more than just a summary check out my code on Github** [here!](https://github.com/ErikaWells/ShoeAnalysis)
+**If you want more than just a summary check out my code on Github** <a href="https://github.com/ErikaWells/ShoeAnalysis" target="_blank" rel="noopener noreferrer">here!</a>
 
 ### Summary of the Dataset
 My final dataset includes:
 - **182 sneakers**
 - **Features:** Rank, shoe name, price, release date, product link, main color (if available), and category (if available)
-- **Missing Data:** Some entries lacked information on color and category, which could be filled through further scraping or alternative data sources.
+- **Missing Data:** Some entries lacked information on color and category, which I'm currently working on adding by following each individual product link, stay tuned for new data soon!
 
 
-### Interesting Findings (Teaser)
+### Interesting Initial Findings
 While I will cover detailed Exploratory Data Analysis (EDA) separately, some initial observations include:
-- Air Jordan models dominate the top rankings, reflecting their sustained popularity.
-- Release dates are clustered around major sneaker release seasons (e.g., January and March).
-- Prices vary widely, with some sneakers under $120 and others exceeding $250.
+- A wide range of prices from $50 to almost $500!
+- An average sneaker price of $156.58
+- The majority of sneakers between $110.25 and $189.75
+
 
 
 ### Keep Learning
 For those looking to replicate or push this project further, here are a few helpful resources:
-- **Python Libraries**: [requests](https://docs.python-requests.org/en/latest/), [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/), [Selenium](https://pypi.org/project/selenium/)
-- **Web Scraping Guidelines**: [Scrapy Documentation](https://docs.scrapy.org/en/latest/)
-- **Sneaker Market Insights**: [GOAT](https://www.goat.com/sneakers/top-100)
+- **Python Libraries**: <a href="https://docs.python-requests.org/en/latest/" target="_blank" rel="noopener noreferrer">`requests`</a>, <a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank" rel="noopener noreferrer">`BeautifulSoup`</a>, <a href="https://pypi.org/project/selenium/" target="_blank" rel="noopener noreferrer">`Selenium`</a>
+- **Web Scraping Guidelines**: <a href="https://docs.scrapy.org/en/latest/" target="_blank" rel="noopener noreferrer">Scrapy Documentation</a>
+- **Sneaker Market Insights**: <a href="https://www.goat.com/sneakers/top-100" target="_blank" rel="noopener noreferrer"> GOAT Top 100</a>
 
 
 ### Access the Code
-Here's another reminder that you can check out my full code and dataset in my [GitHub repository](https://github.com/ErikaWells/ShoeAnalysis) .
+Here's another reminder that you can check out my full code and dataset in my <a href="https://github.com/ErikaWells/ShoeAnalysis" target="_blank" rel="noopener noreferrer">Github Repo</a>.
 
 
 By following these steps, anyone can gain fun insights to their favorite brands top sellers AND learn a ton about data collection, web-scraping, and simple analysis. 
