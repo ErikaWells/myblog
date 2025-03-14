@@ -12,6 +12,7 @@ Sneakers are more than just footwear, they’re a cultural phenomenon! Whether i
 
 
 ![Sneakers by Joshua Renfroe]({{ site.url }}/{{ site.baseurl }}/assets/images/sneakerhead.jpg)
+
 <a href="https://www.instagram.com/joshuarenfroe_/?hl=en" target="_blank" rel="noopener noreferrer">Image by Joshua Refroe</a>
 
 
