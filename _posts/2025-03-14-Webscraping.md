@@ -2,14 +2,15 @@
 
 
 ### Introduction
-Sneakers are more than just footwear, they’re a cultural phenomenon. Whether it’s the latest Air Jordan drop or a nostalgic re-release, sneaker prices and demand fluctuate based on various factors like release date, hype, and exclusivity. In this project, I used web scraping to collect data from GOAT, a popular sneaker marketplace, to analyze trends in sneaker rankings, prices, and release dates.
+Sneakers are more than just footwear, they’re a cultural phenomenon! Whether it’s the latest Air Jordan drop or a nostalgic re-release, sneaker prices and demand fluctuate based on various factors like release date, hype, and exclusivity. In this project, I used web-scraping to collect data from GOAT, a popular sneaker marketplace, to analyze trends in sneaker rankings, prices, and release dates.
 
 
 ### Motivating Question
 The goal of this project was to explore patterns in sneaker popularity and pricing. Specifically, I wanted to investigate:
 - How do sneaker rankings correlate with price and release year?
 - Are newer releases consistently ranked higher than older ones?
-- Which brands or categories dominate the top rankings?
+- Which brands or categories dominate the top rankings? (coming soon)
+- Which colorways are most popular currently? (coming soon)
 
 
 ### Ethical Considerations & Web Scraping Best Practices
@@ -21,16 +22,19 @@ Before collecting data, I ensured that my scraping practices were ethical and al
 
 
 ### How to Get the Data
-For students interested in conducting a similar project, here are the key steps:
-1. **Identify the Target Website**: Choose a reliable source like GOAT that provides structured sneaker data.
-2. **Inspect the Website Structure**: Use browser developer tools (F12 in Chrome) to inspect HTML elements containing product details.
+For anyone interested in conducting a similar project, here is a breakdown of the web-scraping steps:
+1. **Identify the Target Website**: Choose a reliable source like GOAT that provides structured data. I wanted to pick a site that included information of trends, specifically in fashion. This site worked perfectly because the sneakers were already ranked by most popular to least popular.  
+2. **Inspect the Website Structure**: Use browser developer tools (F12 in Chrome) to inspect HTML elements containing product details. You'll come back to this step over and over again as you workshop your code. 
 3. **Use Python for Web Scraping**:
    - `requests` to send HTTP requests
    - `BeautifulSoup` to parse HTML and extract relevant information
-4. **Extract Relevant Features**: I focused on key attributes such as rank, shoe name, price, release date, product link, and (if available) main color and category.
+   - `Selenium` to pull dynamic data
+4. **Extract Relevant Features**: I focused on key attributes such as rank, shoe name, price, release date, product link, and am currently working on getting main color and category.
 5. **Store Data in a Pandas DataFrame**: This allows for easy analysis and visualization.
 6. **Save Data for Future Use**: Export as a CSV for further exploration.
 
+
+**If you want more than just a summary check out my code on Github** [here!](https://github.com/ErikaWells/ShoeAnalysis)
 
 ### Summary of the Dataset
 My final dataset includes:
@@ -46,15 +50,15 @@ While I will cover detailed Exploratory Data Analysis (EDA) separately, some ini
 - Prices vary widely, with some sneakers under $120 and others exceeding $250.
 
 
-### Further Resources
-For those looking to replicate or extend this project, here are some useful resources:
-- **Python Libraries**: [requests](https://docs.python-requests.org/en/latest/), [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/)
+### Keep Learning
+For those looking to replicate or push this project further, here are a few helpful resources:
+- **Python Libraries**: [requests](https://docs.python-requests.org/en/latest/), [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/), [Selenium](https://pypi.org/project/selenium/)
 - **Web Scraping Guidelines**: [Scrapy Documentation](https://docs.scrapy.org/en/latest/)
-- **Sneaker Market Insights**: [GOAT](https://www.goat.com/)
+- **Sneaker Market Insights**: [GOAT](https://www.goat.com/sneakers/top-100)
 
 
 ### Access the Code
-The full code and dataset are available in my [GitHub repository](#) (replace with actual link).
+Here's another reminder that you can check out my full code and dataset in my [GitHub repository](https://github.com/ErikaWells/ShoeAnalysis) .
 
 
-By following these steps, any Stat 386 student can embark on their own data collection project, gaining valuable skills in web scraping, data processing, and statistical analysis!
+By following these steps, anyone can gain fun insights to their favorite brands top sellers AND learn a ton about data collection, web-scraping, and simple analysis. 
