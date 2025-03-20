@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Exploring Sneaker Trends with Web Scraping"
+title:  "Sole Searching: Unveiling Sneaker Trends with Web Scraping"
 author: Erika Wells
 description: "Using GOAT.com to check out what I should be rocking in March 2025."
 image: "/assets/images/Shoe_Header.png"  
