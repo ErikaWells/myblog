@@ -23,6 +23,8 @@ Every sneaker tells a story, but what makes some more valuable than others? This
 - Which brands and styles dominate resale rankings (coming soon)
 - The most popular colorways right now (coming soon)
 
+Overall my question I want to answer is: what factors are most impactful in the popularity of shoes in the current market?
+
 
 ## Ethical Considerations & Web Scraping Best Practices
 Before collecting data, I ensured that my scraping practices were ethical and aligned with best practices:
