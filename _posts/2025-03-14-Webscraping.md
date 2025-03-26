@@ -8,7 +8,7 @@ image: "/assets/images/Shoe_Header.png"
 
 
 # More Than Just Shoes
-Sneakers are more than just footwear, they’re a cultural phenomenon! Whether it’s the latest Air Jordan drop or a nostalgic re-release, sneaker prices and demand fluctuate based on various factors like release date, hype, and exclusivity. In this project, I used web-scraping to collect data from GOAT, a popular sneaker marketplace, to analyze trends in sneaker rankings, prices, and release dates.
+Sneakers are more than just footwear, they’re a cultural phenomenon! Whether it’s the latest Air Jordan drop or a nostalgic re-release, sneaker prices and demand fluctuate based on various factors like release date, hype, and exclusivity. In this project, I used web-scraping to collect data from GOAT, a popular sneaker marketplace, to analyze current trends in sneaker rankings, prices, and release dates. So let's dive in and see whats popular today and what we should be wearing. 
 
 
 ![Sneakers by Joshua Renfroe]({{ site.url }}/{{ site.baseurl }}/assets/images/sneakerhead.jpg)
@@ -57,10 +57,8 @@ My final dataset includes:
 
 
 ## Interesting Initial Findings
-While I will cover detailed Exploratory Data Analysis (EDA) separately, some initial observations include:
-- A wide range of prices from $50 to almost $500!
-- An average sneaker price of $156.58
-- The majority of sneakers between $110.25 and $189.75
+While I’ll be diving into a full Exploratory Data Analysis (EDA) soon, I want to share my initial insights! Sneaker prices in my dataset are all over the place, ranging from a budget-friendly **$50** to a jaw-dropping **$500**. On average, though, you’re looking at about **$156.58** for a pair. Most sneakers fall between **$110.25** and **$189.75**, which seems to be the sweet spot for sneaker shoppers. It’s interesting to see how pricing varies, are people paying for the brand, the hype, or the actual shoe quality? I can’t wait to dig deeper and uncover what’s really driving these numbers. 
+
 
 ![Sneaker Prices]({{ site.url }}/{{ site.baseurl }}/assets/images/sneaker_prices_updated.png)
 
