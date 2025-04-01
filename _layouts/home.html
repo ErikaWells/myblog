@@ -67,7 +67,7 @@
       margin: 20px auto;
       font-size: 1.2rem;
       max-width: 800px;
-      font-family: 'Caveat';
+      font-family: 'Caveat', cursive;
     }
 
     /* Blog Post Section */
@@ -92,25 +92,46 @@
       display: flex;
       align-items: center;
       margin-bottom: 20px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 15px;
       background: white;
       box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-      padding: 10px;
+      border-radius: 8px;
+      padding: 15px;
+      transition: transform 0.2s;
+    }
+
+    .post-list li:hover {
+      transform: scale(1.02);
     }
 
     .blog-roll-image {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
       object-fit: cover;
-      margin-right: 15px;
-      border-radius: 5px;
+      margin-right: 20px;
+      border-radius: 8px;
+    }
+
+    .post-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .post-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #003366;
+      margin-bottom: 5px;
     }
 
     .post-meta {
       font-size: 0.9rem;
       color: gray;
+    }
+
+    .post-description {
+      font-size: 1rem;
+      color: #333;
+      margin-top: 5px;
     }
 
     .post-link {
@@ -120,11 +141,10 @@
 
     /* Map Styling */
     #map {
-      height: 550px;
-      width: 100%;
-      margin: 20px 0;
-      border-left: 5px solid #003366;
-      border-right: 5px solid #003366;
+      height: 500px;
+      width: 90%;
+      margin: 20px auto;
+      display: block;
     }
   </style>
 </head>
@@ -179,6 +199,9 @@
     </div>
     <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
   </footer>
+</body>
+</html>
+
 </body>
 </html>
 
