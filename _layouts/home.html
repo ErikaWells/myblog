@@ -1,238 +1,254 @@
-<style>
-  /* General Site Background */
-  body {
-    background-color: #E0F7FA; /* Very light blue */
-    background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Subtle textured background */
-    background-repeat: repeat;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data-Driven Decisions</title>
 
-  /* Header Bar */
-  .navbar {
-    display: flex;
-    justify-content: center;
-    background-color: #f9d1d1; /* Light pink */
-    padding: 15px 0;
-  }
+  <!-- Leaflet.js CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-  .navbar a {
-    margin: 0 15px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    color: #333;
-    text-decoration: none;
-  }
+  <style>
+    /* General Site Background */
+    body {
+      background-color: #E8F9FC; /* Even lighter blue */
+      background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Subtle texture */
+      background-repeat: repeat;
+    }
 
-  .navbar a:hover {
-    color: #1abc9c; /* Fun pop of color */
-  }
+    /* Header Bar */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #f9d1d1; /* Light pink */
+      padding: 15px 0;
+    }
 
-  /* Page Heading */
-  .page-heading {
-    font-size: 5rem;
-    letter-spacing: 0.8rem; /* More space between letters */
-    font-weight: bold;
-    text-align: center;
-    color: #003366; /* Navy blue */
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-family: 'Arial', sans-serif; /* Simple, bold font */
-    text-transform: uppercase;
-  }
+    .navbar a {
+      margin: 0 15px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: #333;
+      text-decoration: none;
+    }
 
-  /* Intro Section */
-  .intro-section {
-    text-align: center;
-    font-size: 1.2rem;
-    max-width: 900px;
-    margin: 30px auto;
-    color: #333;
-  }
+    .navbar a:hover {
+      color: #1abc9c; /* Fun pop of color */
+    }
 
-  /* Map Section */
-  .map-section {
-    text-align: center;
-    margin-top: 40px;
-  }
+    /* Page Heading */
+    .page-heading {
+      font-size: 5rem;
+      letter-spacing: 0.8rem;
+      font-weight: bold;
+      text-align: center;
+      color: #003366; /* Navy blue */
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-family: 'Arial', sans-serif;
+      text-transform: uppercase;
+    }
 
-  #map {
-    height: 400px;
-    margin: 20px auto;
-  }
+    /* Intro Section */
+    .intro-section {
+      text-align: center;
+      font-size: 1.2rem;
+      max-width: 900px;
+      margin: 30px auto;
+      color: #333;
+    }
 
-  /* Blog Post Section */
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 40px 0;
-  }
+    /* Map Section */
+    .map-section {
+      text-align: center;
+      margin-top: 40px;
+    }
 
-  .post-list {
-    width: 80%; /* Center the posts and give space on sides */
-    padding: 0;
-    list-style: none;
-  }
+    #map {
+      height: 400px;
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto;
+      border-radius: 10px;
+    }
 
-  /* Blog Post Layout */
-  .post-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-  }
+    /* Blog Post Section */
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 40px 0;
+    }
 
-  .post-list li:hover {
-    transform: translateY(-5px); /* Slight hover effect */
-  }
+    .post-list {
+      width: 80%;
+      padding: 0;
+      list-style: none;
+    }
 
-  .blog-roll-image {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-right: 15px;
-  }
+    /* Blog Post Layout */
+    .post-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
 
-  .post-meta {
-    font-size: 14px;
-    color: #999;
-    margin-bottom: 10px;
-  }
+    .post-list li:hover {
+      transform: translateY(-5px);
+    }
 
-  /* Blog Post Titles */
-  h3 a.post-link {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    color: #003366; /* Navy blue for titles */
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    text-decoration: none;
-    letter-spacing: 0.05rem;
-  }
+    .blog-roll-image {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-right: 15px;
+    }
 
-  h3 a.post-link:hover {
-    color: #1abc9c; /* Hover color */
-  }
+    .post-meta {
+      font-size: 14px;
+      color: #999;
+      margin-bottom: 10px;
+    }
 
-  /* Blog Post Description */
-  .post-description {
-    font-size: 0.9rem;
-    color: #666;
-  }
+    /* Blog Post Titles */
+    h3 a.post-link {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      color: #003366; /* Navy blue */
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      text-decoration: none;
+      letter-spacing: 0.05rem;
+    }
 
-  /* Footer Styling */
-  .footer {
-    background-color: #f7b7b7; /* Light pink color */
-    color: #003366; /* Navy blue text color */
-    padding: 20px 0;
-    text-align: center;
-    font-size: 0.9rem;
-    margin-top: 50px;
-  }
+    h3 a.post-link:hover {
+      color: #1abc9c;
+    }
 
-  .footer p {
-    margin: 0;
-  }
+    /* Blog Post Description */
+    .post-description {
+      font-size: 0.9rem;
+      color: #666;
+    }
 
-  .footer-links a {
-    text-decoration: none;
-    margin: 0 15px;
-    color: #003366;
-    font-weight: bold;
-  }
+    /* Footer Styling */
+    .footer {
+      background-color: #f7b7b7; /* Light pink */
+      color: #003366;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
 
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
-</style>
+    .footer p {
+      margin: 0;
+    }
 
-<!-- Header -->
-<header>
-  <div class="navbar">
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/contact">Contact</a>
-  </div>
-  <h1 class="page-heading">Data-Driven Decisions</h1>
-</header>
+    .footer-links a {
+      text-decoration: none;
+      margin: 0 15px;
+      color: #003366;
+      font-weight: bold;
+    }
 
-<!-- Site Description (Intro) -->
-<section class="intro-section">
-  <p>{{ site.description }}</p>
-</section>
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
 
-<!-- Interactive Map Section -->
-<section class="map-section">
-  <div id="map"></div> <!-- Map container -->
-</section>
+  <!-- Header -->
+  <header>
+    <div class="navbar">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <h1 class="page-heading">Data-Driven Decisions</h1>
+  </header>
 
-<!-- Blog Post Section -->
-<section>
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">BLOG POSTS</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-        <li>
-          {%- if post.image -%}
-            <img src="{{- post.image | relative_url -}}" alt="" class="blog-roll-image">
-          {%- else -%}
-            <img src="https://source.unsplash.com/random" alt="" class="blog-roll-image">
-          {%- endif -%}
+  <!-- Site Description (Intro) -->
+  <section class="intro-section">
+    <p>{{ site.description }}</p>
+  </section>
 
-          <div>
-            <span class="post-meta">{{ post.date | date: "%m/%d/%Y" }}</span>
-            <h3>
-              <a class="post-link" href="{{ post.url | relative_url }}">
-                {{ post.title | escape }}
-              </a>
-            </h3>
-            {%- if post.description -%}
-              <div class="post-description"><font size="-1"><em>{{ post.description }}</em></font></div>
+  <!-- Interactive Map Section -->
+  <section class="map-section">
+    <div id="map"></div> <!-- Map container -->
+  </section>
+
+  <!-- Blog Post Section -->
+  <section>
+    {%- if site.posts.size > 0 -%}
+      <h2 class="post-list-heading">BLOG POSTS</h2>
+      <ul class="post-list">
+        {%- for post in site.posts -%}
+          <li>
+            {%- if post.image -%}
+              <img src="{{- post.image | relative_url -}}" alt="" class="blog-roll-image">
+            {%- else -%}
+              <img src="https://source.unsplash.com/random" alt="" class="blog-roll-image">
             {%- endif -%}
-          </div>
-        </li>
-      {%- endfor -%}
-    </ul>
-  {%- endif -%}
-</section>
 
-<!-- Footer -->
-<footer class="footer">
-  <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
-  <div class="footer-links">
-    <a href="https://github.com/ErikaWells" target="_blank">GitHub</a>
-    <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
-    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-  </div>
-</footer>
+            <div>
+              <span class="post-meta">{{ post.date | date: "%m/%d/%Y" }}</span>
+              <h3>
+                <a class="post-link" href="{{ post.url | relative_url }}">
+                  {{ post.title | escape }}
+                </a>
+              </h3>
+              {%- if post.description -%}
+                <div class="post-description"><em>{{ post.description }}</em></div>
+              {%- endif -%}
+            </div>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </section>
 
-<!-- Leaflet.js Script -->
-<script>
-  // Initialize the map centered at a global level
-  var map = L.map('map').setView([51.505, -0.09], 2);  // Default view centered on London
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="https://github.com/ErikaWells" target="_blank">GitHub</a>
+      <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
 
-  // Add OpenStreetMap as the tile layer
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
+  <!-- Leaflet.js Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Initialize the map
+      var map = L.map('map').setView([51.505, -0.09], 2);
 
-  // Add click event to the map
-  map.on('click', function(e) {
-    var lat = e.latlng.lat;
-    var lng = e.latlng.lng;
-    alert('You clicked at: ' + lat + ', ' + lng);
-  });
+      // Add OpenStreetMap tile layer
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
 
-  // Add some markers or interactive zooms
-  var marker = L.marker([51.505, -0.09]).addTo(map);
-  marker.bindPopup('<b>London</b><br>Click to zoom in').openPopup();
+      // Add a marker
+      var marker = L.marker([51.505, -0.09]).addTo(map);
+      marker.bindPopup('<b>London</b><br>Click to zoom in').openPopup();
 
-  marker.on('click', function() {
-    map.setView([51.5074, -0.1278], 10); // Zoom into London when the marker is clicked
-  });
-</script>
+      marker.on('click', function () {
+        map.setView([51.5074, -0.1278], 10);
+      });
 
+      // Fix map rendering issue on load
+      setTimeout(() => {
+        map.invalidateSize();
+      }, 500);
+    });
+  </script>
 
-
+</body>
+</html>
 
 
 
