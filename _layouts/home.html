@@ -1,254 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data-Driven Decisions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Experience Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #E3F2FD; /* Even lighter blue */
+        }
 
-  <!-- Leaflet.js CDN -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        header {
+            background-color: #001F3F; /* Navy blue */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
 
-  <style>
-    /* General Site Background */
-    body {
-      background-color: #E8F9FC; /* Even lighter blue */
-      background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Subtle texture */
-      background-repeat: repeat;
-    }
+        #map {
+            height: 80vh;
+            width: 90%;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
 
-    /* Header Bar */
-    .navbar {
-      display: flex;
-      justify-content: center;
-      background-color: #f9d1d1; /* Light pink */
-      padding: 15px 0;
-    }
-
-    .navbar a {
-      margin: 0 15px;
-      font-size: 1rem;
-      text-transform: uppercase;
-      color: #333;
-      text-decoration: none;
-    }
-
-    .navbar a:hover {
-      color: #1abc9c; /* Fun pop of color */
-    }
-
-    /* Page Heading */
-    .page-heading {
-      font-size: 5rem;
-      letter-spacing: 0.8rem;
-      font-weight: bold;
-      text-align: center;
-      color: #003366; /* Navy blue */
-      margin-top: 40px;
-      margin-bottom: 20px;
-      font-family: 'Arial', sans-serif;
-      text-transform: uppercase;
-    }
-
-    /* Intro Section */
-    .intro-section {
-      text-align: center;
-      font-size: 1.2rem;
-      max-width: 900px;
-      margin: 30px auto;
-      color: #333;
-    }
-
-    /* Map Section */
-    .map-section {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    #map {
-      height: 400px;
-      width: 90%;
-      max-width: 800px;
-      margin: 20px auto;
-      border-radius: 10px;
-    }
-
-    /* Blog Post Section */
-    section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 40px 0;
-    }
-
-    .post-list {
-      width: 80%;
-      padding: 0;
-      list-style: none;
-    }
-
-    /* Blog Post Layout */
-    .post-list li {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-      transition: transform 0.3s ease;
-    }
-
-    .post-list li:hover {
-      transform: translateY(-5px);
-    }
-
-    .blog-roll-image {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      margin-right: 15px;
-    }
-
-    .post-meta {
-      font-size: 14px;
-      color: #999;
-      margin-bottom: 10px;
-    }
-
-    /* Blog Post Titles */
-    h3 a.post-link {
-      font-size: 1.2rem;
-      text-transform: uppercase;
-      color: #003366; /* Navy blue */
-      font-family: 'Arial', sans-serif;
-      font-weight: bold;
-      text-decoration: none;
-      letter-spacing: 0.05rem;
-    }
-
-    h3 a.post-link:hover {
-      color: #1abc9c;
-    }
-
-    /* Blog Post Description */
-    .post-description {
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    /* Footer Styling */
-    .footer {
-      background-color: #f7b7b7; /* Light pink */
-      color: #003366;
-      padding: 20px 0;
-      text-align: center;
-      font-size: 0.9rem;
-      margin-top: 50px;
-    }
-
-    .footer p {
-      margin: 0;
-    }
-
-    .footer-links a {
-      text-decoration: none;
-      margin: 0 15px;
-      color: #003366;
-      font-weight: bold;
-    }
-
-    .footer-links a:hover {
-      text-decoration: underline;
-    }
-  </style>
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #001F3F;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="navbar">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/contact">Contact</a>
-    </div>
-    <h1 class="page-heading">Data-Driven Decisions</h1>
-  </header>
+    <header>
+        My Global Experience
+    </header>
 
-  <!-- Site Description (Intro) -->
-  <section class="intro-section">
-    <p>{{ site.description }}</p>
-  </section>
+    <div id="map"></div>
 
-  <!-- Interactive Map Section -->
-  <section class="map-section">
-    <div id="map"></div> <!-- Map container -->
-  </section>
+    <footer>
+        &copy; 2025 Erika's Experience Portfolio
+    </footer>
 
-  <!-- Blog Post Section -->
-  <section>
-    {%- if site.posts.size > 0 -%}
-      <h2 class="post-list-heading">BLOG POSTS</h2>
-      <ul class="post-list">
-        {%- for post in site.posts -%}
-          <li>
-            {%- if post.image -%}
-              <img src="{{- post.image | relative_url -}}" alt="" class="blog-roll-image">
-            {%- else -%}
-              <img src="https://source.unsplash.com/random" alt="" class="blog-roll-image">
-            {%- endif -%}
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialize the map
+            var map = L.map('map').setView([20, 0], 2); // Global View
 
-            <div>
-              <span class="post-meta">{{ post.date | date: "%m/%d/%Y" }}</span>
-              <h3>
-                <a class="post-link" href="{{ post.url | relative_url }}">
-                  {{ post.title | escape }}
-                </a>
-              </h3>
-              {%- if post.description -%}
-                <div class="post-description"><em>{{ post.description }}</em></div>
-              {%- endif -%}
-            </div>
-          </li>
-        {%- endfor -%}
-      </ul>
-    {%- endif -%}
-  </section>
+            // Add OpenStreetMap tile layer
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="https://github.com/ErikaWells" target="_blank">GitHub</a>
-      <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-    </div>
-  </footer>
+            // Function to create a custom marker icon
+            function createCustomIcon(iconUrl) {
+                return L.icon({
+                    iconUrl: iconUrl,
+                    iconSize: [32, 32],  // Icon size
+                    iconAnchor: [16, 32],  // Point of the icon that corresponds to the marker's location
+                    popupAnchor: [0, -30]  // Position of popup relative to icon
+                });
+            }
 
-  <!-- Leaflet.js Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Initialize the map
-      var map = L.map('map').setView([51.505, -0.09], 2);
+            // Experience data
+            var experiences = [
+                { 
+                    coords: [40.2518, -111.6493],  // Provo, Utah (BYU)
+                    title: "BYU - Statistics: Data Science, Business Minor",
+                    link: "/education",
+                    icon: "icons/education.png"  // Change this to your own icon
+                },
+                { 
+                    coords: [40.6461, -111.4980],  // Park City, Utah (Triumph Geared Solutions)
+                    title: "Pricing Analyst Intern - Triumph Geared Solutions",
+                    link: "/experience",
+                    icon: "icons/business.png"
+                },
+                { 
+                    coords: [36.7538, 3.0422],  // Algiers, Algeria (AI Dev Lab)
+                    title: "Global Growth & Strategy Coordinator - AI Dev Lab",
+                    link: "/experience",
+                    icon: "icons/business.png"
+                },
+                { 
+                    coords: [14.8333, -91.5167],  // Quetzaltenango, Guatemala (Humanitarian Trip)
+                    title: "Humanitarian Trip Leader - Guatemala",
+                    link: "/experience",
+                    icon: "icons/humanitarian.png"
+                },
+                { 
+                    coords: [18.7357, -70.1627],  // The Dominican Republic (Humanitarian Trip)
+                    title: "Humanitarian Trip Leader - The Dominican Republic",
+                    link: "/experience",
+                    icon: "icons/humanitarian.png"
+                },
+                { 
+                    coords: [17.4075, 102.7920],  // Udon, Thailand (Humanitarian Trip)
+                    title: "Humanitarian Trip Leader - Thailand",
+                    link: "/experience",
+                    icon: "icons/humanitarian.png"
+                },
+                { 
+                    coords: [35.7796, -78.6382],  // Raleigh, North Carolina (Mission)
+                    title: "Mission for the Church of Jesus Christ of Latter-day Saints",
+                    link: "/mission",
+                    icon: "icons/mission.png"
+                },
+                { 
+                    coords: [26.5253, -80.0664],  // Boynton Beach, Florida (Sales Representative)
+                    title: "Sales Representative",
+                    link: "/sales",
+                    icon: "icons/sales.png"
+                },
+                { 
+                    coords: [41.3803, -70.6455],  // Martha's Vineyard, Massachusetts (Ice Cream Shop)
+                    title: "Ice Cream Shop Employee",
+                    link: "/icecream",
+                    icon: "icons/work.png"
+                }
+            ];
 
-      // Add OpenStreetMap tile layer
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      }).addTo(map);
+            // Add markers to the map
+            experiences.forEach(function(exp) {
+                var marker = L.marker(exp.coords, { icon: createCustomIcon(exp.icon) }).addTo(map);
+                marker.bindPopup(`<b>${exp.title}</b><br><a href="${exp.link}" target="_blank">View Details</a>`);
+            });
 
-      // Add a marker
-      var marker = L.marker([51.505, -0.09]).addTo(map);
-      marker.bindPopup('<b>London</b><br>Click to zoom in').openPopup();
-
-      marker.on('click', function () {
-        map.setView([51.5074, -0.1278], 10);
-      });
-
-      // Fix map rendering issue on load
-      setTimeout(() => {
-        map.invalidateSize();
-      }, 500);
-    });
-  </script>
+            // Fix map rendering issue
+            setTimeout(() => {
+                map.invalidateSize();
+            }, 500);
+        });
+    </script>
 
 </body>
 </html>
+
 
 
 
