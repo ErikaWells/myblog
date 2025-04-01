@@ -8,6 +8,7 @@
   <!-- Leaflet.js CDN -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
 
   <style>
     /* General Site Background */
@@ -66,7 +67,7 @@
       margin: 20px auto;
       font-size: 1.2rem;
       max-width: 800px;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-family: 'Caveat', cursive;
     }
 
     /* Blog Post Section */
@@ -93,6 +94,10 @@
       margin-bottom: 20px;
       border-bottom: 1px solid #ccc;
       padding-bottom: 15px;
+      background: white;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      padding: 10px;
     }
 
     .blog-roll-image {
@@ -108,11 +113,18 @@
       color: gray;
     }
 
+    .post-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
     /* Map Styling */
     #map {
-      height: 500px;
+      height: 550px;
       width: 100%;
       margin: 20px 0;
+      border-left: 5px solid #003366;
+      border-right: 5px solid #003366;
     }
   </style>
 </head>
@@ -141,45 +153,22 @@
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    var locations = [
-      { lat: 40.7128, lng: -74.0060, title: "New York, USA" },
-      { lat: 34.0522, lng: -118.2437, title: "Los Angeles, USA" },
-      { lat: 51.5074, lng: -0.1278, title: "London, UK" }
+    var experiences = [
+      { coords: [40.2518, -111.6493], title: "BYU - Statistics: Data Science, Business Minor" },
+      { coords: [40.6461, -111.4980], title: "Pricing Analyst Intern - Triumph Geared Solutions" },
+      { coords: [36.7538, 3.0422], title: "Global Growth & Strategy Coordinator - AI Dev Lab" },
+      { coords: [14.8333, -91.5167], title: "Humanitarian Trip Leader & Translator - Guatemala" },
+      { coords: [18.7357, -70.1627], title: "Humanitarian Trip Leader & Translator - The Dominican Republic" },
+      { coords: [17.4075, 102.7920], title: "Humanitarian Trip Leader - Thailand" },
+      { coords: [35.7796, -78.6382], title: "Mission for the Church of Jesus Christ of Latter-day Saints" },
+      { coords: [26.5253, -80.0664], title: "Sales Representative" },
+      { coords: [41.3803, -70.6455], title: "Ice Cream Shop Employee" }
     ];
 
-    locations.forEach(function(loc) {
-      L.marker([loc.lat, loc.lng]).addTo(map).bindPopup(loc.title);
+    experiences.forEach(function(exp) {
+      L.marker(exp.coords).addTo(map).bindPopup(`<b>${exp.title}</b>`);
     });
   </script>
-
-  <!-- Blog Post Section -->
-  <section>
-    {%- if site.posts.size > 0 -%}
-      <h2 class="post-list-heading">BLOG POSTS</h2>
-      <ul class="post-list">
-        {%- for post in site.posts -%}
-          <li>
-            {%- if post.image -%}
-              <img src="{{- post.image | relative_url -}}" alt="" class="blog-roll-image">
-            {%- else -%}
-              <img src="https://source.unsplash.com/random" alt="" class="blog-roll-image">
-            {%- endif -%}
-            <div>
-              <span class="post-meta">{{ post.date | date: "%m/%d/%Y" }}</span>
-              <h3>
-                <a class="post-link" href="{{ post.url | relative_url }}">
-                  {{ post.title | escape }}
-                </a>
-              </h3>
-              {%- if post.description -%}
-                <div class="post-description"><font size="-1"><em>{{ post.description }}</em></font></div>
-              {%- endif -%}
-            </div>
-          </li>
-        {%- endfor -%}
-      </ul>
-    {%- endif -%}
-  </section>
 
   <!-- Footer -->
   <footer class="footer">
@@ -187,12 +176,12 @@
       <a href="/">Home</a>
       <a href="/about">About</a>
       <a href="/contact">Contact</a>
-      <a href="https://github.com/ErikaWells" target="_blank">GitHub</a>
-      <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
-      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
     </div>
     <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
   </footer>
+</body>
+</html>
+
 </body>
 </html>
 
