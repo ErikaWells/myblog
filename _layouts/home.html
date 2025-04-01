@@ -1,7 +1,9 @@
 <style>
-/* General Site Background */
+  /* General Site Background */
   body {
-    background-color: #f9f7f1; /* Slightly more cream than white */
+    background-color: #E0F7FA; /* Very light blue */
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Subtle textured background */
+    background-repeat: repeat;
   }
 
   /* Header Bar */
@@ -44,6 +46,17 @@
     max-width: 900px;
     margin: 30px auto;
     color: #333;
+  }
+
+  /* Map Section */
+  .map-section {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  #map {
+    height: 400px;
+    margin: 20px auto;
   }
 
   /* Blog Post Section */
@@ -147,6 +160,11 @@
   <p>{{ site.description }}</p>
 </section>
 
+<!-- Interactive Map Section -->
+<section class="map-section">
+  <div id="map"></div> <!-- Map container -->
+</section>
+
 <!-- Blog Post Section -->
 <section>
   {%- if site.posts.size > 0 -%}
@@ -186,6 +204,32 @@
     <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
   </div>
 </footer>
+
+<!-- Leaflet.js Script -->
+<script>
+  // Initialize the map centered at a global level
+  var map = L.map('map').setView([51.505, -0.09], 2);  // Default view centered on London
+
+  // Add OpenStreetMap as the tile layer
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  // Add click event to the map
+  map.on('click', function(e) {
+    var lat = e.latlng.lat;
+    var lng = e.latlng.lng;
+    alert('You clicked at: ' + lat + ', ' + lng);
+  });
+
+  // Add some markers or interactive zooms
+  var marker = L.marker([51.505, -0.09]).addTo(map);
+  marker.bindPopup('<b>London</b><br>Click to zoom in').openPopup();
+
+  marker.on('click', function() {
+    map.setView([51.5074, -0.1278], 10); // Zoom into London when the marker is clicked
+  });
+</script>
 
 
 
