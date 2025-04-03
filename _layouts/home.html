@@ -190,6 +190,34 @@
     });
   </script>
 
+  <!-- Blog Post Section -->
+  <section>
+    <h2 class="post-list-heading">BLOG POSTS</h2>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+        <li>
+          {%- if post.image -%}
+            <img src="{{- post.image | relative_url -}}" alt="" class="blog-roll-image">
+          {%- else -%}
+            <img src="https://source.unsplash.com/random" alt="" class="blog-roll-image">
+          {%- endif -%}
+
+          <div class="post-content">
+            <span class="post-meta">{{ post.date | date: "%m/%d/%Y" }}</span>
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+            {%- if post.description -%}
+              <div class="post-description"><font size="-1"><em>{{ post.description }}</em></font></div>
+            {%- endif -%}
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="navbar">
@@ -198,12 +226,15 @@
       <a href="/contact">Contact</a>
     </div>
     <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="https://github.com/ErikaWells" target="_blank">GitHub</a>
+      <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+    </div>
   </footer>
 </body>
 </html>
 
-</body>
-</html>
 
 
 
