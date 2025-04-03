@@ -167,7 +167,8 @@
 
 
   <!-- Map Section -->
-    <script>
+  <div id="map"></div>
+  <script>
     var map = L.map('map').setView([20, 0], 2);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
@@ -176,7 +177,7 @@
     // Define custom icons for each location
     var customIcons = {
       "BYU": L.icon({
-        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/BYUlogo.png', // Replace with BYU icon URL
+        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/BYUlogo.png?raw=true', // Corrected URL
         iconSize: [32, 32],
         iconAnchor: [16, 32],
         popupAnchor: [0, -32]
@@ -194,25 +195,25 @@
         popupAnchor: [0, -32]
       }),
       "Humanitarian Trip Leader - Guatemala": L.icon({
-        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/HXPlogo.png', // Replace with Guatemala icon URL
+        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/HXPlogo.png?raw=true', // Corrected URL
         iconSize: [32, 32],
         iconAnchor: [16, 32],
         popupAnchor: [0, -32]
       }),
       "Humanitarian Trip Leader - The Dominican Republic": L.icon({
-        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/HXPlogo.png', // Replace with Dominican Republic icon URL
+        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/HXPlogo.png?raw=true', // Corrected URL
         iconSize: [32, 32],
         iconAnchor: [16, 32],
         popupAnchor: [0, -32]
       }),
       "Humanitarian Trip Leader - Thailand": L.icon({
-        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/HXPlogo.png', // Replace with Thailand icon URL
+        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/HXPlogo.png?raw=true', // Corrected URL
         iconSize: [32, 32],
         iconAnchor: [16, 32],
         popupAnchor: [0, -32]
       }),
       "Mission for the Church of Jesus Christ of Latter-day Saints": L.icon({
-        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/LDSLogo.png', // Replace with LDS icon URL
+        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/LDSLogo.png?raw=true', // Corrected URL
         iconSize: [32, 32],
         iconAnchor: [16, 32],
         popupAnchor: [0, -32]
@@ -224,7 +225,7 @@
         popupAnchor: [0, -32]
       }),
       "Ice Cream Shop Employee": L.icon({
-        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/IceCream.png', // Replace with Ice Cream icon URL
+        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/IceCream.png?raw=true', // Corrected URL
         iconSize: [32, 32],
         iconAnchor: [16, 32],
         popupAnchor: [0, -32]
@@ -244,7 +245,7 @@
       { coords: [41.3803, -70.6455], title: "Ice Cream Shop Employee", icon: customIcons["Ice Cream Shop Employee"] }
     ];
 
-  // Add markers with custom icons
+    // Add markers with custom icons
     experiences.forEach(function(exp) {
       L.marker(exp.coords, { icon: exp.icon }).addTo(map).bindPopup(`<b>${exp.title}</b>`);
     });
@@ -294,6 +295,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
