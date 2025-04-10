@@ -1,15 +1,15 @@
-<!-- about.html -->
+<!-- _layouts/about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{ page.title }}</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       background-color: #aad3df;
-      background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+      background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); 
       font-family: 'Raleway', sans-serif;
       margin: 0;
       padding: 0;
@@ -51,10 +51,24 @@
       text-transform: uppercase;
     }
 
+    .about-quote {
+      text-align: center;
+      font-style: italic;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
     .about-text {
       font-size: 1.1rem;
       color: #003366;
       line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      margin: 30px auto 0;
+      max-width: 100%;
+      border-radius: 10px;
     }
   </style>
 </head>
@@ -66,13 +80,10 @@
   </div>
 
   <section class="about-section">
-    <h1 class="about-heading">About Me</h1>
-    <p class="about-text">
-      Hi, I'm Erika! I'm passionate about using data to drive smart decisions and make an impact. Whether it's analyzing trends, optimizing business processes, or exploring new cultures, I love learning and helping others grow along the way. This site shares some of the places, projects, and passions that shape who I am.
-    </p>
-    <p class="about-text">
-      I've led humanitarian trips, worked in pricing strategy and data analytics, and I'm constantly seeking out new adventures. Thanks for visiting!
-    </p>
+    <h1 class="about-heading">{{ page.title }} 🌍✈️</h1>
+    
+    {{ content }}
   </section>
 </body>
 </html>
+
