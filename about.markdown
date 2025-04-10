@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<img src="/assets/images/erika-travel.jpg" alt="Erika exploring the world" style="width: 100%; max-width: 600px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin-bottom: 2rem;" />
+<img src="/assets/images/erika-travel.jpg" alt="Erika" style="width: 100%; max-width: 600px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin-bottom: 2rem;" />
 
 ## Hey there! 🌎✈️
 
