@@ -192,63 +192,62 @@
         popupAnchor: [0, -32]
       }),
       "Global Growth & Strategy Coordinator": L.icon({
-        iconUrl: 'https://example.com/global-growth-icon.png', // Replace with Global Growth icon URL
+        iconUrl: 'https://example.com/global-growth-icon.png', 
         iconSize: [32, 32],
         iconAnchor: [16, 32],
         popupAnchor: [0, -32]
       }),
       "Humanitarian Trip Leader & Translator - Guatemala": L.icon({
-        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/HXPlogo.png?raw=true', // Corrected URL
-        iconSize: [32, 32],
+        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/HXPlogo.png?raw=true', 
+        iconSize: [28, 28],
         iconAnchor: [16, 32],
         popupAnchor: [0, -32]
       }),
       "Humanitarian Trip Leader & Translator - The Dominican Republic": L.icon({
-        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/HXPlogo.png?raw=true', // Corrected URL
-        iconSize: [32, 32],
+        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/HXPlogo.png?raw=true', 
+        iconSize: [28, 28],
         iconAnchor: [16, 32],
         popupAnchor: [0, -32]
       }),
       "Humanitarian Trip Leader - Thailand": L.icon({
-        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/HXPlogo.png?raw=true', // Corrected URL
-        iconSize: [32, 32],
+        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/HXPlogo.png?raw=true', 
+        iconSize: [28, 28],
         iconAnchor: [16, 32],
         popupAnchor: [0, -32]
       }),
       "Mission for the Church of Jesus Christ of Latter-day Saints": L.icon({
-        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/LDSLogo.png?raw=true', // Corrected URL
+        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/LDSLogo.png?raw=true', 
         iconSize: [32, 40],
         iconAnchor: [16, 32],
         popupAnchor: [0, -32]
       }),
       "Sales Representative": L.icon({
-        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/SunergyLogo.png?raw=true', // Replace with Sales Representative icon URL
+        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/SunergyLogo.png?raw=true', 
         iconSize: [32, 32],
         iconAnchor: [16, 32],
         popupAnchor: [0, -32]
       }),
       "Ice Cream Shop Employee": L.icon({
-        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/IceCream.png?raw=true', // Corrected URL
+        iconUrl: 'https://github.com/ErikaWells/myblog/blob/main/assets/images/IceCream.png?raw=true',
         iconSize: [32, 40],
         iconAnchor: [16, 32],
         popupAnchor: [0, -32]
       })
     };
 
-    // Define the locations and their associated icons
+
     var experiences = [
       { coords: [40.2518, -111.6493], title: "BYU - Statistics: Data Science, Business Minor", icon: customIcons["BYU"] },
       { coords: [43.6461, -105.4980], title: "Pricing Analyst Intern - Triumph Geared Solutions", icon: customIcons["Pricing Analyst Intern"] },
       { coords: [36.7538, 3.0422], title: "Global Growth & Strategy Coordinator - AI Dev Lab", icon: customIcons["Global Growth & Strategy Coordinator"] },
-      { coords: [14.8333, -91.5167], title: "Humanitarian Trip Leader - Guatemala", icon: customIcons["Humanitarian Trip Leader & Translator - Guatemala"] },
-      { coords: [18.7357, -70.1627], title: "Humanitarian Trip Leader - The Dominican Republic", icon: customIcons["Humanitarian Trip Leader & Translator - The Dominican Republic"] },
+      { coords: [14.8333, -91.5167], title: "Humanitarian Trip Leader & Translator - Guatemala", icon: customIcons["Humanitarian Trip Leader & Translator - Guatemala"] },
+      { coords: [18.7357, -70.1627], title: "Humanitarian Trip Leader & Translator - The Dominican Republic", icon: customIcons["Humanitarian Trip Leader & Translator - The Dominican Republic"] },
       { coords: [17.4075, 102.7920], title: "Humanitarian Trip Leader - Thailand", icon: customIcons["Humanitarian Trip Leader - Thailand"] },
       { coords: [35.7796, -78.6382], title: "Mission for the Church of Jesus Christ of Latter-day Saints", icon: customIcons["Mission for the Church of Jesus Christ of Latter-day Saints"] },
       { coords: [26.5253, -80.0664], title: "Sales Representative", icon: customIcons["Sales Representative"] },
       { coords: [41.3803, -70.6455], title: "Ice Cream Shop Employee", icon: customIcons["Ice Cream Shop Employee"] }
     ];
 
-    // Add markers with custom icons
     experiences.forEach(function(exp) {
       L.marker(exp.coords, { icon: exp.icon }).addTo(map).bindPopup(`<b>${exp.title}</b>`);
     });
